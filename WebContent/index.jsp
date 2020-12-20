@@ -19,6 +19,9 @@
 	<div class="container center-box shadow-border">
     	<h2 class="header-text"><img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Cohort Characterisation</h2>
     	<div style="text-align:center;">
+    	This is an initial configuration of an exploration tool for the N3C cohort data.<br>
+    	Visualizations coming <i>real soon now...</i><br><br>
+    	You are encouraged to submit suggestions for enhancements/additions to <a href="https://n3c-help.atlassian.net/jira/software/c/projects/N3CINTA/issues/N3CINTA-4">this tracking issue.</a>
         </div>
 <p>&nbsp;</p>
 <form action="index.jsp">
