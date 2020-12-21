@@ -11,8 +11,14 @@
 		background-image:none !important;
 	}
 </style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<body>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><body>
 
 	<jsp:include page="navbar.jsp" flush="true" />
 	
@@ -24,6 +30,20 @@
     	You are encouraged to submit suggestions for enhancements/additions to <a href="https://n3c-help.atlassian.net/jira/software/c/projects/N3CINTA/issues/N3CINTA-4">this tracking issue.</a>
         </div>
 <p>&nbsp;</p>
+<ul class="nav nav-tabs" style="font-size:16px;">
+	<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+	<li><a data-toggle="tab" href="#blood">Blood</a></li>
+	<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
+	<li><a data-toggle="tab" href="#charlson">Charlson</a></li>
+	<li><a data-toggle="tab" href="#filled">Filled</a></li>
+	<li><a data-toggle="tab" href="#medications">Medications</a></li>
+	<li><a data-toggle="tab" href="#models">Models</a></li>
+	<li><a data-toggle="tab" href="#peaks">Peaks</a></li>
+	<li><a data-toggle="tab" href="#severity">Severity</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade in active" id="home">
 <form action="index.jsp">
 <label for="table">Choose a table:</label>
 <select name="mode" id="mode"  onchange="this.form.submit()">
@@ -72,8 +92,34 @@
 	</c:when>
 </c:choose>
 <div id="table" style="overflow: scroll;">&nbsp;</div>
-
 <div id="op_table" style="overflow: scroll;">&nbsp;</div>
+</div>
+
+<div class="tab-pane fade show" id="blood">
+	<jsp:include page="graphs/blood.jsp" flush="true" />
+</div>
+<div class="tab-pane fade show" id="characteristics">
+		<h3>Patient Characteristics by COVID Status</h3>
+</div>
+<div class="tab-pane fade show" id="charlson">
+	<jsp:include page="graphs/charlson.jsp" flush="true" />
+</div>
+<div class="tab-pane fade show" id="filled">
+		<h3>Filled CC  Tag</h3>
+</div>
+<div class="tab-pane fade show" id="medications">
+		<h3>Medication Use Frequency</h3>
+</div>
+<div class="tab-pane fade show" id="models">
+		<h3>Models and Summary</h3>
+</div>
+<div class="tab-pane fade show" id="peaks">
+		<h3>Peak, Average and Nadir</h3>
+</div>
+<div class="tab-pane fade show" id="severity">
+		<h3>Severity</h3>
+</div>
+</div>
 	<jsp:include page="footer.jsp" flush="true" />
 	</div>
 </body>
