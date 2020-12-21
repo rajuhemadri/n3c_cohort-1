@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
-	select ${param.column} as element,substring(${param.value} from '[0-9]+')::int as  count  from enclave_cohort.${param.table} where value!='Unknown';
+	select ${param.column} as element,substring(${param.value} from '[0-9]+')::int as  count  from enclave_cohort.${param.table} where value!='Unknown' and value!='Totals';
 </sql:query>
 
 [
