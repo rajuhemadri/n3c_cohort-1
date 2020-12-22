@@ -4,7 +4,7 @@
 </ul>
 
 <div class="tab-content">
-<div class="tab-pane fade active" id="by_severity">
+<div class="tab-pane fade in active" id="by_severity">
 	<jsp:include page="blood_by_severity.jsp" flush="true" />
 </div>
 <div class="tab-pane fade" id="by_type">
