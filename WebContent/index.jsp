@@ -23,7 +23,7 @@
 	<jsp:include page="navbar.jsp" flush="true" />
 	
 	<div class="container center-box shadow-border">
-    	<h2 class="header-text"><img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Cohort Characterisation</h2>
+    	<h2 class="header-text"><img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Cohort Exploration</h2>
     	<div style="text-align:center;">
     	This is an initial configuration of an exploration tool for the N3C cohort data.<br>
     	Visualizations coming <i>real soon now...</i><br><br>
@@ -95,28 +95,28 @@
 <div id="op_table" style="overflow: scroll;">&nbsp;</div>
 </div>
 
-<div class="tab-pane fade show" id="blood">
+<div class="tab-pane fade" id="blood">
 	<jsp:include page="graphs/blood.jsp" flush="true" />
 </div>
-<div class="tab-pane fade show" id="characteristics">
+<div class="tab-pane fade" id="characteristics">
 		<h3>Patient Characteristics by COVID Status</h3>
 </div>
-<div class="tab-pane fade show" id="charlson">
+<div class="tab-pane fade" id="charlson">
 	<jsp:include page="graphs/charlson.jsp" flush="true" />
 </div>
-<div class="tab-pane fade show" id="filled">
+<div class="tab-pane fade" id="filled">
 		<h3>Filled CC  Tag</h3>
 </div>
-<div class="tab-pane fade show" id="medications">
+<div class="tab-pane fade" id="medications">
 		<h3>Medication Use Frequency</h3>
 </div>
-<div class="tab-pane fade show" id="models">
+<div class="tab-pane fade" id="models">
 		<h3>Models and Summary</h3>
 </div>
-<div class="tab-pane fade show" id="peaks">
+<div class="tab-pane fade" id="peaks">
 		<h3>Peak, Average and Nadir</h3>
 </div>
-<div class="tab-pane fade show" id="severity">
+<div class="tab-pane fade" id="severity">
 		<h3>Severity</h3>
 </div>
 </div>

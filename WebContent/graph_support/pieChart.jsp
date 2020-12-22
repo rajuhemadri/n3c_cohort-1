@@ -10,11 +10,11 @@ chart {
 }
 </style>
 
-<script src="<util:applicationRoot/>/resources/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
 d3.json("${param.data_page}", function(error, data) {
-var width = parseInt(d3.select("${param.dom_element}").style("width"))-10,
+var width=338, //var width = parseInt(d3.select("${param.dom_element}").style("width"))-10,
 height = width,
 border = 10,
 radius = Math.min(width-border, height-border) / 2;
