@@ -3,15 +3,15 @@
 <script>
 var valueLabelWidth = 50; // space reserved for value labels (right)
 var barHeight = 20; // height of one bar
-var barLabelWidth = 150; // space reserved for bar labels
+var barLabelWidth = 160; // space reserved for bar labels
 var barLabelPadding = 5; // padding between bar and bar labels (left)
 var gridLabelHeight = 18; // space reserved for gridline labels
 var gridChartOffset = 3; // space between start of grid and first bar
-var maxBarWidth = 420; // width of the bar with the max value
+var maxBarWidth = 300; // width of the bar with the max value
  
 // accessor functions 
 var barLabel = function(d) { return d.element; };
-var barValue = function(d) { return parseInt(d.count); };
+var barValue = function(d) { return parseFloat(d.count); };
  
 d3.json("${param.data_page}", function(data) {
 	// scales

@@ -99,7 +99,7 @@
 	<jsp:include page="graphs/blood.jsp" flush="true" />
 </div>
 <div class="tab-pane fade" id="characteristics">
-		<h3>Patient Characteristics by COVID Status</h3>
+	<jsp:include page="graphs/characteristics.jsp" flush="true" />
 </div>
 <div class="tab-pane fade" id="charlson">
 	<jsp:include page="graphs/charlson.jsp" flush="true" />
