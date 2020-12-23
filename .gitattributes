@@ -27,9 +27,16 @@ WebContent/graphs/blood.jsp -text
 WebContent/graphs/blood_by_severity.jsp -text
 WebContent/graphs/blood_by_type.jsp -text
 WebContent/graphs/characteristics.jsp -text
+WebContent/graphs/characteristics_ethnicity.jsp -text
+WebContent/graphs/characteristics_gender.jsp -text
 WebContent/graphs/characteristics_misc.jsp -text
+WebContent/graphs/characteristics_payer.jsp -text
+WebContent/graphs/characteristics_race.jsp -text
 WebContent/graphs/charlson.jsp -text
 WebContent/graphs/columnFreqData.jsp -text
+WebContent/graphs/medications.jsp -text
+WebContent/graphs/medications_by_medication.jsp -text
+WebContent/graphs/medications_by_severity.jsp -text
 WebContent/graphs/rowFreqData.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text

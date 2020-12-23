@@ -8,7 +8,7 @@
 		substring(suspected_covid from '^[0-9.]+')::float as suspected_covid,
 		substring(lab_confirmed_negative from '^[0-9.]+')::float as lab_confirmed_negative,
 		substring(lab_confirmed_positive from '^[0-9.]+')::float as lab_confirmed_positive
-	from enclave_cohort.all_patient_characteristics_by_covid_status where variable='${param.variable}';
+	from enclave_cohort.all_patient_characteristics_by_covid_status where variable='${param.variable}'<c:if test="${not empty param.value}"> and value='${param.value}'</c:if>;
 </sql:query>
 
 [

@@ -3,15 +3,15 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from (
-	select 1 as seq, 'Mild' as element,substring(mild from '[0-9]+')::int as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
+	select 1 as seq, 'Mild' as element,substring(mild from '[0-9.]+')::float as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
 	union
-	select 2 as seq, 'Mild ED' as element,substring(mild_ed from '[0-9]+')::int as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
+	select 2 as seq, 'Mild ED' as element,substring(mild_ed from '[0-9.]+')::float as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
 	union
-	select 3 as seq, 'Moderate' as element,substring(moderate from '[0-9]+')::int as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
+	select 3 as seq, 'Moderate' as element,substring(moderate from '[0-9.]+')::float as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
 	union
-	select 4 as seq,  'Severe' as element,substring(severe from '[0-9]+')::int as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
+	select 4 as seq,  'Severe' as element,substring(severe from '[0-9.]+')::float as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
 	union
-	select 5 as seq, 'Dead w/ COVID' as element,substring(dead_w_covid from '[0-9]+')::int as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
+	select 5 as seq, 'Dead w/ COVID' as element,substring(dead_w_covid from '[0-9.]+')::float as count from enclave_cohort.${param.table} where ${param.column}='${param.value}'
 	) as foo order by seq;
 </sql:query>
 

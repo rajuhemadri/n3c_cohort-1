@@ -26,8 +26,7 @@
     	<h2 class="header-text"><img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Cohort Exploration</h2>
     	<div style="text-align:center;">
     	This is an initial configuration of an exploration tool for the N3C cohort data.<br>
-    	Visualizations coming <i>real soon now...</i><br><br>
-    	You are encouraged to submit suggestions for enhancements/additions to <a href="https://n3c-help.atlassian.net/jira/software/c/projects/N3CINTA/issues/N3CINTA-4">this tracking issue.</a>
+     	You are encouraged to submit suggestions for enhancements/additions to <a href="https://n3c-help.atlassian.net/jira/software/c/projects/N3CINTA/issues/N3CINTA-4">this tracking issue.</a>
         </div>
 <p>&nbsp;</p>
 <ul class="nav nav-tabs" style="font-size:16px;">
@@ -35,9 +34,7 @@
 	<li><a data-toggle="tab" href="#blood">Blood</a></li>
 	<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
 	<li><a data-toggle="tab" href="#charlson">Charlson</a></li>
-	<li><a data-toggle="tab" href="#filled">Filled</a></li>
 	<li><a data-toggle="tab" href="#medications">Medications</a></li>
-	<li><a data-toggle="tab" href="#models">Models</a></li>
 	<li><a data-toggle="tab" href="#peaks">Peaks</a></li>
 	<li><a data-toggle="tab" href="#severity">Severity</a></li>
 </ul>
@@ -104,20 +101,16 @@
 <div class="tab-pane fade" id="charlson">
 	<jsp:include page="graphs/charlson.jsp" flush="true" />
 </div>
-<div class="tab-pane fade" id="filled">
-		<h3>Filled CC  Tag</h3>
-</div>
 <div class="tab-pane fade" id="medications">
-		<h3>Medication Use Frequency</h3>
-</div>
-<div class="tab-pane fade" id="models">
-		<h3>Models and Summary</h3>
+	<jsp:include page="graphs/medications.jsp" flush="true" />
 </div>
 <div class="tab-pane fade" id="peaks">
 		<h3>Peak, Average and Nadir</h3>
+		<p><i>In development...</i></p>
 </div>
 <div class="tab-pane fade" id="severity">
 		<h3>Severity</h3>
+		<p><i>In development...</i></p>
 </div>
 </div>
 	<jsp:include page="footer.jsp" flush="true" />

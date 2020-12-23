@@ -1,7 +1,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<h3>Blood Type</h3>
+<h3>Miscellaneous Measures</h3>
 
 	<div class="row">
 		<div class="col-sm-6">
