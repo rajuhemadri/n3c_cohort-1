@@ -35,7 +35,7 @@
 	<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
 	<li><a data-toggle="tab" href="#charlson">Charlson</a></li>
 	<li><a data-toggle="tab" href="#medications">Medications</a></li>
-	<li><a data-toggle="tab" href="#peaks">Peaks</a></li>
+	<li><a data-toggle="tab" href="#labs">Labs</a></li>
 	<li><a data-toggle="tab" href="#severity">Severity</a></li>
 </ul>
 
@@ -104,9 +104,8 @@
 <div class="tab-pane fade" id="medications">
 	<jsp:include page="graphs/medications.jsp" flush="true" />
 </div>
-<div class="tab-pane fade" id="peaks">
-		<h3>Peak, Average and Nadir</h3>
-		<p><i>In development...</i></p>
+<div class="tab-pane fade" id="labs">
+	<jsp:include page="graphs/labs.jsp" flush="true" />
 </div>
 <div class="tab-pane fade" id="severity">
 		<h3>Severity</h3>

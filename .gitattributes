@@ -20,8 +20,10 @@ WebContent/feeds/meds.jsp -text
 WebContent/feeds/models.jsp -text
 WebContent/feeds/peak.jsp -text
 WebContent/feeds/severity.jsp -text
+WebContent/feeds/severity_detail.jsp -text
 WebContent/footer.jsp -text
 WebContent/graph_support/pieChart.jsp -text
+WebContent/graph_support/smallVerticalBarChart.jsp -text
 WebContent/graph_support/verticalBarChart.jsp -text
 WebContent/graphs/blood.jsp -text
 WebContent/graphs/blood_by_severity.jsp -text
@@ -34,10 +36,15 @@ WebContent/graphs/characteristics_payer.jsp -text
 WebContent/graphs/characteristics_race.jsp -text
 WebContent/graphs/charlson.jsp -text
 WebContent/graphs/columnFreqData.jsp -text
+WebContent/graphs/labs.jsp -text
 WebContent/graphs/medications.jsp -text
 WebContent/graphs/medications_by_medication.jsp -text
 WebContent/graphs/medications_by_severity.jsp -text
 WebContent/graphs/rowFreqData.jsp -text
+WebContent/graphs/severity.jsp -text
+WebContent/graphs/severity_ethnicity.jsp -text
+WebContent/graphs/severity_gender.jsp -text
+WebContent/graphs/severity_misc.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text
