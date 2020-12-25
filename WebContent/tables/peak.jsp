@@ -28,7 +28,7 @@ $.getJSON("feeds/peak.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Peak, Average and Nadir</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];

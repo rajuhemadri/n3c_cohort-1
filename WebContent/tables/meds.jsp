@@ -28,7 +28,7 @@ $.getJSON("feeds/meds.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Medication Use Frequency</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];

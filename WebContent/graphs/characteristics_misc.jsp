@@ -3,12 +3,25 @@
 
 <h3>Miscellaneous Measures</h3>
 
+<sql:query var="elements" dataSource="jdbc/N3CCohort">
+select * from 
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as hispanic from enclave_cohort.all_patient_characteristics_by_covid_status where value='Hispanic or Latino') as hispanic
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as non from enclave_cohort.all_patient_characteristics_by_covid_status where value='Not Hispanic or Latino') as non
+	on true
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.all_patient_characteristics_by_covid_status where value='Missing/Unknown') as unknown
+	on true
+</sql:query>
+
+<c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-default">
 				<div class="panel-heading">Average Age at Visit Start</div>
 				<div class="panel-body">
 					<div id="misc_age"></div>
+					<p>Overall: ${row.hispanic}</p>
 				</div>
 			</div>
 		</div>
@@ -17,6 +30,7 @@
 				<div class="panel-heading">Test  Count</div>
 				<div class="panel-body">
 					<div id="misc_test"></div>
+					<p>Overall: ${row.hispanic}</p>
 				</div>
 			</div>
 		</div>
@@ -27,6 +41,7 @@
 				<div class="panel-heading">BMI</div>
 				<div class="panel-body">
 					<div id="misc_bmi"></div>
+					<p>Overall: ${row.hispanic}</p>
 				</div>
 			</div>
 		</div>
@@ -35,10 +50,12 @@
 				<div class="panel-heading">Weight</div>
 				<div class="panel-body">
 					<div id="misc_weight"></div>
+					<p>Overall: ${row.hispanic}</p>
 				</div>
 			</div>
 		</div>
 	</div>
+</c:forEach>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=age_at_visit_start_in_years_int" />

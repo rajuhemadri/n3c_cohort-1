@@ -1,19 +1,20 @@
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 <script src="<util:applicationRoot/>/resources/d3.v3.min.js"></script>
 <script>
-var valueLabelWidth = 50; // space reserved for value labels (right)
-var barHeight = 20; // height of one bar
-var barLabelWidth = 105; // space reserved for bar labels
-var barLabelPadding = 4; // padding between bar and bar labels (left)
-var gridLabelHeight = 18; // space reserved for gridline labels
-var gridChartOffset = 3; // space between start of grid and first bar
-var maxBarWidth = 190; // width of the bar with the max value
  
 // accessor functions 
 var barLabel = function(d) { return d.element; };
 var barValue = function(d) { return parseFloat(d.count); };
  
 d3.json("${param.data_page}", function(data) {
+	var valueLabelWidth = 50; // space reserved for value labels (right)
+	var barHeight = 20; // height of one bar
+	var barLabelWidth = 105; // space reserved for bar labels
+	var barLabelPadding = 4; // padding between bar and bar labels (left)
+	var gridLabelHeight = 18; // space reserved for gridline labels
+	var gridChartOffset = 3; // space between start of grid and first bar
+	var maxBarWidth = 190; // width of the bar with the max value
+
 	// scales
 	var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
 	var y = function(d, i) { return yScale(i); };

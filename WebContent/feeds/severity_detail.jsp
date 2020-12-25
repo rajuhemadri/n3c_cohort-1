@@ -3,7 +3,6 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 	select
-		substring(x__all from '^[0-9.]+')::float as x__all,
 		substring(mild from '^[0-9.]+')::float as mild,
 		substring(mild_ed from '^[0-9.]+')::float as mild_ed,
 		substring(moderate from '^[0-9.]+')::float as moderate,
@@ -14,7 +13,6 @@
 
 [
 	<c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
-	    {"element":"All","count":${row.x__all}},
 	    {"element":"Mild","count":${row.mild}},
 	    {"element":"Mild ED","count":${row.mild_ed}},
 	    {"element":"Moderate","count":${row.moderate}},

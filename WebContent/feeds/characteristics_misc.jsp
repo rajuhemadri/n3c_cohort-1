@@ -3,7 +3,6 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 	select
-		substring(x__all from '^[0-9.]+')::float as x__all,
 		substring(no_covid_test from '^[0-9.]+')::float as no_covid_test,
 		substring(suspected_covid from '^[0-9.]+')::float as suspected_covid,
 		substring(lab_confirmed_negative from '^[0-9.]+')::float as lab_confirmed_negative,
@@ -13,7 +12,6 @@
 
 [
 	<c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
-	    {"element":"All","count":${row.x__all}},
 	    {"element":"No COVID Test","count":${row.no_covid_test}},
 	    {"element":"Suspected COVID","count":${row.suspected_covid}},
 	    {"element":"Lab Confirmed Negative","count":${row.lab_confirmed_negative}},

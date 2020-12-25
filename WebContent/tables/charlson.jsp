@@ -28,7 +28,7 @@ $.getJSON("feeds/charlson.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Charlson Frequency</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];

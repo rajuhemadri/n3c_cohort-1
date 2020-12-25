@@ -28,7 +28,7 @@ $.getJSON("feeds/filled.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Filled CC Tag</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];

@@ -28,7 +28,7 @@ $.getJSON("feeds/blood.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Blood Type</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];

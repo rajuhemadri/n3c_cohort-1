@@ -28,7 +28,7 @@ $.getJSON("feeds/models.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Models and Summary</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];

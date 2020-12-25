@@ -23,6 +23,7 @@ WebContent/feeds/severity.jsp -text
 WebContent/feeds/severity_detail.jsp -text
 WebContent/footer.jsp -text
 WebContent/graph_support/pieChart.jsp -text
+WebContent/graph_support/scatterplot.jsp -text
 WebContent/graph_support/smallVerticalBarChart.jsp -text
 WebContent/graph_support/verticalBarChart.jsp -text
 WebContent/graphs/blood.jsp -text
@@ -45,6 +46,9 @@ WebContent/graphs/severity.jsp -text
 WebContent/graphs/severity_ethnicity.jsp -text
 WebContent/graphs/severity_gender.jsp -text
 WebContent/graphs/severity_misc.jsp -text
+WebContent/graphs/severity_payer.jsp -text
+WebContent/graphs/severity_race.jsp -text
+WebContent/graphs/severity_smoking.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text

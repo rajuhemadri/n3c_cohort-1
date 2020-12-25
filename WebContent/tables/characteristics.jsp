@@ -28,7 +28,7 @@ $.getJSON("feeds/characteristics.jsp", function(data){
 	}
 
 	var divContainer = document.getElementById("table");
-	divContainer.innerHTML = "";
+	divContainer.innerHTML = "<h3>Patient Characteristics by COVID Status</h3>";
 	divContainer.appendChild(table);
 
 	var data = json['rows'];
