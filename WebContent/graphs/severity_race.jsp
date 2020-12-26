@@ -3,12 +3,37 @@
 
 <h3>Race</h3>
 
+<sql:query var="elements" dataSource="jdbc/N3CCohort">
+select * from 
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as amind from enclave_cohort.severity_table2_for_export where value='American Indian or Alaska Native') as amind
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as asian from enclave_cohort.severity_table2_for_export where value='Asian') as asian
+	on true
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as black from enclave_cohort.severity_table2_for_export where value='Black or African American') as black
+	on true
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.severity_table2_for_export where value='Missing/Unknown' and variable='Race') as unknown
+	on true
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as hawaiian from enclave_cohort.severity_table2_for_export where value='Native Hawaiian or Other Pacific Islander') as hawaiian
+	on true
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.severity_table2_for_export where value='Other' and variable='Race') as other
+	on true
+	left join
+	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as white from enclave_cohort.severity_table2_for_export where value='White') as white
+	on true
+</sql:query>
+
+<c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-default">
 				<div class="panel-heading">American Indian or Alaska Native</div>
 				<div class="panel-body">
 					<div id="severity_race_amind"></div>
+					<p>Total: ${row.amind}</p>
 				</div>
 			</div>
 		</div>
@@ -17,6 +42,7 @@
 				<div class="panel-heading">Asian</div>
 				<div class="panel-body">
 					<div id="severity_race_asian"></div>
+					<p>Total: ${row.asian}</p>
 				</div>
 			</div>
 		</div>
@@ -27,6 +53,7 @@
 				<div class="panel-heading">Black or African American</div>
 				<div class="panel-body">
 					<div id="severity_race_black"></div>
+					<p>Total: ${row.black}</p>
 				</div>
 			</div>
 		</div>
@@ -35,6 +62,7 @@
 				<div class="panel-heading">Missing/Unknown</div>
 				<div class="panel-body">
 					<div id="severity_race_missing"></div>
+					<p>Total: ${row.unknown}</p>
 				</div>
 			</div>
 		</div>
@@ -45,6 +73,7 @@
 				<div class="panel-heading">Native Hawaiian or Other Pacific Islander</div>
 				<div class="panel-body">
 					<div id="severity_race_hawaiian"></div>
+					<p>Total: ${row.hawaiian}</p>
 				</div>
 			</div>
 		</div>
@@ -53,6 +82,7 @@
 				<div class="panel-heading">Other</div>
 				<div class="panel-body">
 					<div id="severity_race_other"></div>
+					<p>Total: ${row.other}</p>
 				</div>
 			</div>
 		</div>
@@ -63,10 +93,12 @@
 				<div class="panel-heading">White</div>
 				<div class="panel-body">
 					<div id="severity_race_white"></div>
+					<p>Total: ${row.white}</p>
 				</div>
 			</div>
 		</div>
 	</div>
+</c:forEach>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=Race&value=American+Indian+or+Alaska+Native" />

@@ -37,6 +37,7 @@ WebContent/graphs/characteristics_payer.jsp -text
 WebContent/graphs/characteristics_race.jsp -text
 WebContent/graphs/charlson.jsp -text
 WebContent/graphs/columnFreqData.jsp -text
+WebContent/graphs/home.jsp -text
 WebContent/graphs/labs.jsp -text
 WebContent/graphs/medications.jsp -text
 WebContent/graphs/medications_by_medication.jsp -text

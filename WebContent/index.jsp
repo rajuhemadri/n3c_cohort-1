@@ -40,16 +40,21 @@ table.dataTable thead .sorting_asc {
 		<p>&nbsp;</p>
 		<ul class="nav nav-tabs" style="font-size: 16px;">
 			<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-			<li><a data-toggle="tab" href="#blood">Blood</a></li>
 			<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
+			<li><a data-toggle="tab" href="#blood">Blood</a></li>
 			<li><a data-toggle="tab" href="#charlson">Charlson</a></li>
 			<li><a data-toggle="tab" href="#medications">Medications</a></li>
 			<li><a data-toggle="tab" href="#labs">Labs</a></li>
 			<li><a data-toggle="tab" href="#severity">Severity</a></li>
+			<li><a data-toggle="tab" href="#tables">Tables</a></li>
 		</ul>
 
 		<div class="tab-content">
 			<div class="tab-pane fade in active" id="home">
+				<jsp:include page="graphs/home.jsp" flush="true" />
+			</div>
+			
+			<div class="tab-pane fade" id="tables">
 
 				<div id="target_table"></div>
 				<script type="text/javascript">
@@ -63,8 +68,8 @@ table.dataTable thead .sorting_asc {
 				<form action="index.jsp">
 					<label for="table">Choose a table:</label>
 					<select name="mode" id="mode" onchange="testing(mode.value)">
-						<option value="blood" <c:if test="${param.mode == 'blood' }">selected</c:if>>Blood</option>
 						<option value="characteristics"	<c:if test="${empty param.mode ||  param.mode == 'characteristics' }">selected</c:if>>Characteristics</option>
+						<option value="blood" <c:if test="${param.mode == 'blood' }">selected</c:if>>Blood</option>
 						<option value="charlson" <c:if test="${param.mode == 'charlson' }">selected</c:if>>Charlson</option>
 						<option value="filled" <c:if test="${param.mode == 'filled' }">selected</c:if>>Filled</option>
 						<option value="meds" <c:if test="${param.mode == 'meds' }">selected</c:if>>Medications</option>

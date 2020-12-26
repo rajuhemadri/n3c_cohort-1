@@ -4,7 +4,7 @@
 	<div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav" style="display: flex; width: 100%;">
 			<li class="nav-item">
-				<a class="nav-link" href="index.jsp">Home</a>
+				<a class="nav-link" href="Https://covid.cd2h.org">N3C</a>
 			</li>
 			<c:if test="${not empty admin}">
 				<li class="nav-item">
@@ -15,10 +15,7 @@
 				</li>
 			</c:if>
 			<li class="nav-item">
-				<a class="nav-link" href="search.jsp">Search</a>
-			</li>
-			<li class="nav-item" style="flex-grow: 1; text-align: right;">
-				<a class="nav-link" href="logout.jsp"><small>Logout</small></a>
+				<a class="nav-link" href="https://cd2h.org">CD2H</a>
 			</li>
 		</ul>
 	</div>

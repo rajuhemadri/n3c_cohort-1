@@ -30,7 +30,7 @@
 	width:20%; 
 	max-width:50px; 
 	height:auto; 
-	margin-right:10px;"
+	margin-right:10px;
 }
 
 .header-text{
@@ -42,7 +42,7 @@
 /* -------------- Footer ---------------------  */
 #footer {
     text-align:center;
-    width=100%;
+    width:100%;
     padding:20px 0px 0px 0px;
  	bottom:0; 
 }
