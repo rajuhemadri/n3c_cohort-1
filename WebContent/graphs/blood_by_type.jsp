@@ -35,7 +35,7 @@ select * from
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">A Negative</div>
 				<div class="panel-body">
 					<div id="blood_a_neg"></div>
@@ -44,7 +44,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">A Positive</div>
 				<div class="panel-body">
 					<div id="blood_a_pos"></div>
@@ -53,7 +53,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">AB Negative</div>
 				<div class="panel-body">
 					<div id="blood_ab_neg"></div>
@@ -64,7 +64,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">AB Positive</div>
 				<div class="panel-body">
 					<div id="blood_ab_pos"></div>
@@ -73,7 +73,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">B Negative</div>
 				<div class="panel-body">
 					<div id="blood_b_neg"></div>
@@ -82,7 +82,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">B Positive</div>
 				<div class="panel-body">
 					<div id="blood_b_pos"></div>
@@ -91,7 +91,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">O Negative</div>
 				<div class="panel-body">
 					<div id="blood_o_neg"></div>
@@ -100,7 +100,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">O Positive</div>
 				<div class="panel-body">
 					<div id="blood_o_pos"></div>
@@ -109,7 +109,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Unknown</div>
 				<div class="panel-body">
 					<div id="blood_unknown"></div>

@@ -59,8 +59,10 @@ table.dataTable thead .sorting_asc {
 				<div id="target_table"></div>
 				<script type="text/javascript">
 					function testing(mode) {
-						d3.html("<util:applicationRoot/>/tables/" + mode + ".jsp", function(fragment) {
-							d3.select("#target_table").node().append(fragment);
+						d3.html("tables/" + mode + ".jsp", function(fragment) {
+							var divContainer = document.getElementById("target_table");
+							divContainer.innerHTML = "";
+							divContainer.append(fragment);
 						});
 					}
 				</script>

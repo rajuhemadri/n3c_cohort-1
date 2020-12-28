@@ -11,7 +11,7 @@
 	<h4>${row.alias}</h4>
 	<div class="row">
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Peak</div>
 				<div class="panel-body">
 					<div id="${row.id}_peak"></div>
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Average</div>
 				<div class="panel-body">
 					<div id="${row.id}_average"></div>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Nadir</div>
 				<div class="panel-body">
 					<div id="${row.id}_nadir"></div>

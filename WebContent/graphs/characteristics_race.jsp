@@ -29,7 +29,7 @@ select * from
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">American Indian or Alaska Native</div>
 				<div class="panel-body">
 					<div id="race_amind"></div>
@@ -38,7 +38,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Asian</div>
 				<div class="panel-body">
 					<div id="race_asian"></div>
@@ -49,7 +49,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Black or African American</div>
 				<div class="panel-body">
 					<div id="race_black"></div>
@@ -58,7 +58,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Missing/Unknown</div>
 				<div class="panel-body">
 					<div id="race_missing"></div>
@@ -69,7 +69,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Native Hawaiian or Other Pacific Islander</div>
 				<div class="panel-body">
 					<div id="race_hawaiian"></div>
@@ -78,7 +78,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Other</div>
 				<div class="panel-body">
 					<div id="race_other"></div>
@@ -89,7 +89,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">White</div>
 				<div class="panel-body">
 					<div id="race_white"></div>

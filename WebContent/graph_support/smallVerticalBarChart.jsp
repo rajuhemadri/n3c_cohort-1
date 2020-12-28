@@ -1,5 +1,5 @@
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
-<script src="<util:applicationRoot/>/resources/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
  
 // accessor functions 
@@ -58,7 +58,7 @@ d3.json("${param.data_page}", function(data) {
 	  .attr('height', yScale.rangeBand())
 	  .attr('width', function(d) { return x(barValue(d)); })
 	  .attr('stroke', 'white')
-	  .attr('fill', 'steelblue');
+	  .attr('fill', '#376076');
 	// bar value labels
 	barsContainer.selectAll("text").data(data).enter().append("text")
 	  .attr("x", function(d) { return x(barValue(d)); })

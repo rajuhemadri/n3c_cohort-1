@@ -13,21 +13,22 @@
 	font-size: 11px;
 }
 </style>
-<script src="<util:applicationRoot/>/resources/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript">
 
+d3.json("${param.data_page}", function(error, dataset) {
 			//Width and height
-			var w = 800;
-			var h = 500;
+			var w = 400;
+			var h = 400;
 			var padding = 70;
-			
+
 			//Create scale functions
 			var xScale = d3.scale.linear()
-								 .domain([0, d3.max(dataset, function(d) { return d[0]; })])
+								 .domain([0, d3.max(dataset, function(d) { return Math.max(d[0], d[1]); })])
 								 .range([padding, w - padding]);
 
 			var yScale = d3.scale.linear()
-								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+								 .domain([0, d3.max(dataset, function(d) { return Math.max(d[0], d[1]); })])
 								 .range([h - padding, padding]);
 
 			var rScale = d3.scale.linear()
@@ -45,12 +46,16 @@
 							  .scale(yScale)
 							  .orient("left")
 							  .ticks(5);
-
+			
 			//Create SVG element
-			var svg = d3.select("#graph")
+			var svg = d3.select("${param.dom_element}")
 						.append("svg")
 						.attr("width", w+padding)
 						.attr("height", h);
+			
+			// plot x=y
+			
+			svg.append("line").attr('x1',0+padding).attr('y1',h-padding).attr('x2',w-padding).attr('y2',0+padding).attr("stroke-width", 1).attr("stroke", '#376076').attr("fill", "black");
 
 			//Create circles
 			svg.selectAll("circle")
@@ -76,14 +81,14 @@
 			   		return d[2];
 			   })
 			   .attr("x", function(d) {
-			   		return xScale(d[0]+4);
+			   		return xScale(d[0])*1.05;
 			   })
 			   .attr("y", function(d) {
-			   		return yScale(d[1]+4);
+			   		return yScale(d[1]);
 			   })
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "11px")
-			   .attr("fill", "red");
+			   .attr("fill", "#376076");
 			
 			//Create X axis
 			svg.append("g")
@@ -126,6 +131,7 @@
 				}
 			});
 		</c:if>
+});
 			</script>
 			<c:if test="${not empty param.click_action}">
 				<ol class="bulletedList">

@@ -17,7 +17,7 @@ select * from
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Female</div>
 				<div class="panel-body">
 					<div id="gender_female"></div>
@@ -26,7 +26,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Male</div>
 				<div class="panel-body">
 					<div id="gender_male"></div>
@@ -37,7 +37,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Other</div>
 				<div class="panel-body">
 					<div id="gender_other"></div>

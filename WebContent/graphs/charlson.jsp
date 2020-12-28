@@ -13,7 +13,7 @@
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">All Patients</div>
 				<div class="panel-body">
 					<div id="charlson_all"></div>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Mild</div>
 				<div class="panel-body">
 					<div id="charlson_mild"></div>
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Mild ED</div>
 				<div class="panel-body">
 					<div id="charlson_mild_ed"></div>
@@ -42,7 +42,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Moderate</div>
 				<div class="panel-body">
 					<div id="charlson_moderate"></div>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Severe</div>
 				<div class="panel-body">
 					<div id="charlson_severe"></div>
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Dead w/ COVID</div>
 				<div class="panel-body">
 					<div id="charlson_dead"></div>

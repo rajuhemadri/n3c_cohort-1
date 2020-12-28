@@ -23,7 +23,7 @@ select * from
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Average Age at Visit Start</div>
 				<div class="panel-body">
 					<div id="severity_misc_age"></div>
@@ -32,7 +32,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Length of Stay</div>
 				<div class="panel-body">
 					<div id="severity_misc_stay"></div>
@@ -43,7 +43,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">BMI</div>
 				<div class="panel-body">
 					<div id="severity_misc_bmi"></div>
@@ -52,7 +52,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Weight</div>
 				<div class="panel-body">
 					<div id="severity_misc_weight"></div>
@@ -61,7 +61,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Q Score</div>
 				<div class="panel-body">
 					<div id="severity_misc_q"></div>

@@ -121,7 +121,13 @@
 
 /* -------------- Panel ---------------------  */
 
-.panel-heading{
+.panel-primary{
+	border-color: rgba(100,42,107,1);
+}
+
+
+.panel-primary>.panel-heading{
+	background-color: rgba(100,42,107,1);
 	font-size: 14px;
     font-weight: bold;
 }

@@ -20,7 +20,7 @@ select * from
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Medicaid</div>
 				<div class="panel-body">
 					<div id="severity_payer_medicaid"></div>
@@ -29,7 +29,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Medicare</div>
 				<div class="panel-body">
 					<div id="severity_payer_medicare"></div>
@@ -40,7 +40,7 @@ select * from
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Other Payer</div>
 				<div class="panel-body">
 					<div id="severity_payer_other"></div>
@@ -49,7 +49,7 @@ select * from
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">Private Health Insurance</div>
 				<div class="panel-body">
 					<div id="severity_payer_private"></div>

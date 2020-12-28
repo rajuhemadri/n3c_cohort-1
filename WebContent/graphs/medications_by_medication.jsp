@@ -10,7 +10,7 @@
 <div class="row">
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">${row.value}</div>
 				<div class="panel-body">
 					<div id="${row.value}"></div>
