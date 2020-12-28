@@ -16,8 +16,8 @@
 				<div class="panel-heading">All Patients</div>
 				<div class="panel-body">
 					<div id="medication_all"></div>
-					<p>Totals: ${row.x__all}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.x__all}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -25,8 +25,8 @@
 				<div class="panel-heading">Mild</div>
 				<div class="panel-body">
 					<div id="medication_mild"></div>
-					<p>Totals: ${row.mild}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.mild}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -34,8 +34,8 @@
 				<div class="panel-heading">Mild ED</div>
 				<div class="panel-body">
 					<div id="medication_mild_ed"></div>
-					<p>Totals: ${row.mild_ed}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.mild_ed}</div>
 			</div>
 		</div>
 	</div>
@@ -45,8 +45,8 @@
 				<div class="panel-heading">Moderate</div>
 				<div class="panel-body">
 					<div id="medication_moderate"></div>
-					<p>Totals: ${row.moderate}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.moderate}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -54,8 +54,8 @@
 				<div class="panel-heading">Severe</div>
 				<div class="panel-body">
 					<div id="medication_severe"></div>
-					<p>Totals: ${row.severe}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.severe}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -63,8 +63,8 @@
 				<div class="panel-heading">Dead w/ COVID</div>
 				<div class="panel-body">
 					<div id="medication_dead"></div>
-					<p>Totals: ${row.dead_w_covid}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.dead_w_covid}</div>
 			</div>
 		</div>
 	</div>

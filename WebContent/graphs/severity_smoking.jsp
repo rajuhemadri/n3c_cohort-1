@@ -18,8 +18,8 @@ select * from
 				<div class="panel-heading">Current or Former</div>
 				<div class="panel-body">
 					<div id="severity_smoking_current"></div>
-					<p>Total: ${row.smoker}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.smoker}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -27,8 +27,8 @@ select * from
 				<div class="panel-heading">Non Smoker</div>
 				<div class="panel-body">
 					<div id="severity_smoking_non"></div>
-					<p>Total: ${row.non}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.non}</div>
 			</div>
 		</div>
 	</div>

@@ -5,14 +5,6 @@
 <html>
 <jsp:include page="head.jsp" flush="true" />
 
-<style type="text/css" media="all">
-@import "resources/n3c_login_style.css";
-</style>
-<style type="text/css">
-table.dataTable thead .sorting_asc {
-	background-image: none !important;
-}
-</style>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -23,6 +15,14 @@ table.dataTable thead .sorting_asc {
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css" media="all">
+@import "resources/n3c_login_style.css";
+</style>
+<style type="text/css">
+table.dataTable thead .sorting_asc {
+	background-image: none !important;
+}
+</style>
 <body>
 
 	<jsp:include page="navbar.jsp" flush="true" />

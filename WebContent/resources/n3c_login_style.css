@@ -118,3 +118,14 @@
 	margin-top:60px;
 	margin-bottom:60px;
 }
+
+/* -------------- Panel ---------------------  */
+
+.panel-heading{
+	font-size: 14px;
+    font-weight: bold;
+}
+
+.panel-footer{
+    padding: 0px 15px 0px 15px;
+}

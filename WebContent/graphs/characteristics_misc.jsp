@@ -24,8 +24,8 @@ select * from
 				<div class="panel-heading">Average Age at Visit Start</div>
 				<div class="panel-body">
 					<div id="char_misc_age"></div>
-					<p>Overall: ${row.age}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.age}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -33,8 +33,8 @@ select * from
 				<div class="panel-heading">Test  Count</div>
 				<div class="panel-body">
 					<div id="char_misc_test"></div>
-					<p>Overall: ${row.testcount}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.testcount}</div>
 			</div>
 		</div>
 	</div>
@@ -44,8 +44,8 @@ select * from
 				<div class="panel-heading">BMI</div>
 				<div class="panel-body">
 					<div id="char_misc_bmi"></div>
-					<p>Overall: ${row.bmi}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.bmi}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -53,8 +53,8 @@ select * from
 				<div class="panel-heading">Weight</div>
 				<div class="panel-body">
 					<div id="char_misc_weight"></div>
-					<p>Overall: ${row.weight}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.weight}</div>
 			</div>
 		</div>
 	</div>

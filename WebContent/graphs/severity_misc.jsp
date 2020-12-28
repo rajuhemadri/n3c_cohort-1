@@ -27,8 +27,8 @@ select * from
 				<div class="panel-heading">Average Age at Visit Start</div>
 				<div class="panel-body">
 					<div id="severity_misc_age"></div>
-					<p>Overall: ${row.age}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.age}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -36,8 +36,8 @@ select * from
 				<div class="panel-heading">Length of Stay</div>
 				<div class="panel-body">
 					<div id="severity_misc_stay"></div>
-					<p>Overall: ${row.stay}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.stay}</div>
 			</div>
 		</div>
 	</div>
@@ -47,8 +47,8 @@ select * from
 				<div class="panel-heading">BMI</div>
 				<div class="panel-body">
 					<div id="severity_misc_bmi"></div>
-					<p>Overall: ${row.bmi}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.bmi}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -56,8 +56,8 @@ select * from
 				<div class="panel-heading">Weight</div>
 				<div class="panel-body">
 					<div id="severity_misc_weight"></div>
-					<p>Overall: ${row.weight}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.weight}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -65,8 +65,8 @@ select * from
 				<div class="panel-heading">Q Score</div>
 				<div class="panel-body">
 					<div id="severity_misc_q"></div>
-					<p>Overall: ${row.qscore}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.qscore}</div>
 			</div>
 		</div>
 	</div>

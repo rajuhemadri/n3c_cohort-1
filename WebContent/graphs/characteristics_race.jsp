@@ -33,8 +33,8 @@ select * from
 				<div class="panel-heading">American Indian or Alaska Native</div>
 				<div class="panel-body">
 					<div id="race_amind"></div>
-					<p>Overall: ${row.amind}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.amind}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -42,8 +42,8 @@ select * from
 				<div class="panel-heading">Asian</div>
 				<div class="panel-body">
 					<div id="race_asian"></div>
-					<p>Overall: ${row.asian}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.asian}</div>
 			</div>
 		</div>
 	</div>
@@ -53,8 +53,8 @@ select * from
 				<div class="panel-heading">Black or African American</div>
 				<div class="panel-body">
 					<div id="race_black"></div>
-					<p>Overall: ${row.black}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.black}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -62,8 +62,8 @@ select * from
 				<div class="panel-heading">Missing/Unknown</div>
 				<div class="panel-body">
 					<div id="race_missing"></div>
-					<p>Overall: ${row.unknown}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.unknown}</div>
 			</div>
 		</div>
 	</div>
@@ -73,8 +73,8 @@ select * from
 				<div class="panel-heading">Native Hawaiian or Other Pacific Islander</div>
 				<div class="panel-body">
 					<div id="race_hawaiian"></div>
-					<p>Overall: ${row.hawaiian}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.hawaiian}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -82,8 +82,8 @@ select * from
 				<div class="panel-heading">Other</div>
 				<div class="panel-body">
 					<div id="race_other"></div>
-					<p>Overall: ${row.other}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.other}</div>
 			</div>
 		</div>
 	</div>
@@ -93,8 +93,8 @@ select * from
 				<div class="panel-heading">White</div>
 				<div class="panel-body">
 					<div id="race_white"></div>
-					<p>Overall: ${row.white}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.white}</div>
 			</div>
 		</div>
 	</div>

@@ -33,8 +33,8 @@ select * from
 				<div class="panel-heading">American Indian or Alaska Native</div>
 				<div class="panel-body">
 					<div id="severity_race_amind"></div>
-					<p>Total: ${row.amind}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.amind}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -42,8 +42,8 @@ select * from
 				<div class="panel-heading">Asian</div>
 				<div class="panel-body">
 					<div id="severity_race_asian"></div>
-					<p>Total: ${row.asian}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.asian}</div>
 			</div>
 		</div>
 	</div>
@@ -53,8 +53,8 @@ select * from
 				<div class="panel-heading">Black or African American</div>
 				<div class="panel-body">
 					<div id="severity_race_black"></div>
-					<p>Total: ${row.black}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.black}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -62,8 +62,8 @@ select * from
 				<div class="panel-heading">Missing/Unknown</div>
 				<div class="panel-body">
 					<div id="severity_race_missing"></div>
-					<p>Total: ${row.unknown}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.unknown}</div>
 			</div>
 		</div>
 	</div>
@@ -73,8 +73,8 @@ select * from
 				<div class="panel-heading">Native Hawaiian or Other Pacific Islander</div>
 				<div class="panel-body">
 					<div id="severity_race_hawaiian"></div>
-					<p>Total: ${row.hawaiian}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.hawaiian}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -82,8 +82,8 @@ select * from
 				<div class="panel-heading">Other</div>
 				<div class="panel-body">
 					<div id="severity_race_other"></div>
-					<p>Total: ${row.other}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.other}</div>
 			</div>
 		</div>
 	</div>
@@ -93,8 +93,8 @@ select * from
 				<div class="panel-heading">White</div>
 				<div class="panel-body">
 					<div id="severity_race_white"></div>
-					<p>Total: ${row.white}</p>
-				</div>
+\				</div>
+				<div class="panel-footer">Total: ${row.white}</div>
 			</div>
 		</div>
 	</div>

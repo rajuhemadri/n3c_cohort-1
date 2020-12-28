@@ -24,8 +24,8 @@ select * from
 				<div class="panel-heading">Medicaid</div>
 				<div class="panel-body">
 					<div id="payer_medicaid"></div>
-					<p>Overall: ${row.medicaid}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.medicaid}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -33,8 +33,8 @@ select * from
 				<div class="panel-heading">Medicare</div>
 				<div class="panel-body">
 					<div id="payer_medicare"></div>
-					<p>Overall: ${row.medicare}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.medicare}</div>
 			</div>
 		</div>
 	</div>
@@ -44,8 +44,8 @@ select * from
 				<div class="panel-heading">Other Payer</div>
 				<div class="panel-body">
 					<div id="payer_other"></div>
-					<p>Overall: ${row.other}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.other}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -53,8 +53,8 @@ select * from
 				<div class="panel-heading">Private Health Insurance</div>
 				<div class="panel-body">
 					<div id="payer_private"></div>
-					<p>Overall: ${row.priv}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.priv}</div>
 			</div>
 		</div>
 	</div>

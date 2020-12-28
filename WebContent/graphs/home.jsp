@@ -30,69 +30,69 @@ select * from
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Severity - Race: Black or African American</div>
+				<div class="panel-heading"><b>Severity</b> - Race: <span  style="font-weight:normal">Black or African American</span></div>
 				<div class="panel-body">
 					<div id="home_race_black"></div>
-					<p>Total: ${row.black}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.black}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Severity - Race: White</div>
+				<div class="panel-heading"><b>Severity</b> - Race: <span  style="font-weight:normal">White</span></div>
 				<div class="panel-body">
 					<div id="home_race_white"></div>
-					<p>Total: ${row.white}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.white}</div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">Blood Type - Severe Cases</div>
+				<div class="panel-heading"><b>Blood Type</b> - Severe Cases</div>
 				<div class="panel-body">
 					<div id="home_blood_severe"></div>
-					<p>Total: ${row.blood_severe}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.blood_severe}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">Medication Use - Severe Cases</div>
+				<div class="panel-heading"><b>Medication Use</b> - Severe Cases</div>
 				<div class="panel-body">
 					<div id="home_med"></div>
-					<p>Total: ${row.med_severe}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.med_severe}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">Charlson - Severe Cases</div>
+				<div class="panel-heading"><b>Charlson</b> - Severe Cases</div>
 				<div class="panel-body">
 					<div id="home_charlson_severe"></div>
-					<p>Total: ${row.charlson_severe}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.charlson_severe}</div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Severity - Payer: Medicaid</div>
+				<div class="panel-heading"><b>Severity</b> - Payer: <span  style="font-weight:normal">Medicaid</span></div>
 				<div class="panel-body">
 					<div id="home_payer_medicaid"></div>
-					<p>Total: ${row.medicaid}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.medicaid}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Severity - Payer: Private Health Insurance</div>
+				<div class="panel-heading"><b>Severity</b> - Payer: <span  style="font-weight:normal">Private Health Insurance</span></div>
 				<div class="panel-body">
 					<div id="home_payer_private"></div>
-					<p>Total: ${row.priv}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.priv}</div>
 			</div>
 		</div>
 	</div>

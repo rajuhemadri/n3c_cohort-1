@@ -21,8 +21,8 @@ select * from
 				<div class="panel-heading">Hispanic or Latino</div>
 				<div class="panel-body">
 					<div id="severity_ethnicity_hispanic"></div>
-					<p>Total: ${row.hispanic}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.hispanic}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -30,8 +30,8 @@ select * from
 				<div class="panel-heading">Not Hispanic or Latino</div>
 				<div class="panel-body">
 					<div id="severity_ethnicity_not"></div>
-					<p>Total: ${row.non}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.non}</div>
 			</div>
 		</div>
 	</div>
@@ -41,8 +41,8 @@ select * from
 				<div class="panel-heading">Missing/Unknown</div>
 				<div class="panel-body">
 					<div id="severity_ethnicity_missing"></div>
-					<p>Total: ${row.unknown}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.unknown}</div>
 			</div>
 		</div>
 	</div>

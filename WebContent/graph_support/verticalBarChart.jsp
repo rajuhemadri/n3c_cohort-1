@@ -13,7 +13,7 @@ d3.json("${param.data_page}", function(data) {
 	var barLabelPadding = 5; // padding between bar and bar labels (left)
 	var gridLabelHeight = 18; // space reserved for gridline labels
 	var gridChartOffset = 3; // space between start of grid and first bar
-	var maxBarWidth = 300; // width of the bar with the max value
+	var maxBarWidth = 280; // width of the bar with the max value
 
 	// scales
 	var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);

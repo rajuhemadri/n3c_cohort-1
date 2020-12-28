@@ -39,8 +39,8 @@ select * from
 				<div class="panel-heading">A Negative</div>
 				<div class="panel-body">
 					<div id="blood_a_neg"></div>
-					<p>Total: ${row.a_neg}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.a_neg}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -48,8 +48,8 @@ select * from
 				<div class="panel-heading">A Positive</div>
 				<div class="panel-body">
 					<div id="blood_a_pos"></div>
-					<p>Total: ${row.a_pos}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.a_pos}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -57,8 +57,8 @@ select * from
 				<div class="panel-heading">AB Negative</div>
 				<div class="panel-body">
 					<div id="blood_ab_neg"></div>
-					<p>Total: ${row.ab_neg}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.ab_neg}</div>
 			</div>
 		</div>
 	</div>
@@ -68,8 +68,8 @@ select * from
 				<div class="panel-heading">AB Positive</div>
 				<div class="panel-body">
 					<div id="blood_ab_pos"></div>
-					<p>Total: ${row.ab_pos}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.ab_pos}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -77,8 +77,8 @@ select * from
 				<div class="panel-heading">B Negative</div>
 				<div class="panel-body">
 					<div id="blood_b_neg"></div>
-					<p>Total: ${row.b_neg}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.b_neg}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -86,8 +86,8 @@ select * from
 				<div class="panel-heading">B Positive</div>
 				<div class="panel-body">
 					<div id="blood_b_pos"></div>
-					<p>Total: ${row.b_pos}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.b_pos}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -95,8 +95,8 @@ select * from
 				<div class="panel-heading">O Negative</div>
 				<div class="panel-body">
 					<div id="blood_o_neg"></div>
-					<p>Total: ${row.o_neg}</p>
-				</div>1
+				</div>
+				<div class="panel-footer">Total: ${row.o_neg}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -104,8 +104,8 @@ select * from
 				<div class="panel-heading">O Positive</div>
 				<div class="panel-body">
 					<div id="blood_o_pos"></div>
-					<p>Total: ${row.o_pos}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.o_pos}</div>
 			</div>
 		</div>
 		<div class="col-sm-4">
@@ -113,8 +113,8 @@ select * from
 				<div class="panel-heading">Unknown</div>
 				<div class="panel-body">
 					<div id="blood_unknown"></div>
-					<p>Total: ${row.unknown}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.unknown}</div>
 			</div>
 		</div>
 	</div>

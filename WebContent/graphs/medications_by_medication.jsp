@@ -14,8 +14,8 @@
 				<div class="panel-heading">${row.value}</div>
 				<div class="panel-body">
 					<div id="${row.value}"></div>
-					<p>Overall: ${row.x__all}</p>
 				</div>
+				<div class="panel-footer">Overall: ${row.x__all}</div>
 			</div>
 		</div>
 </c:forEach>

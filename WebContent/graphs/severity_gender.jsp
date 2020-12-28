@@ -21,8 +21,8 @@ select * from
 				<div class="panel-heading">Female</div>
 				<div class="panel-body">
 					<div id="severity_gender_female"></div>
-					<p>Total: ${row.female}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.female}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -30,8 +30,8 @@ select * from
 				<div class="panel-heading">Male</div>
 				<div class="panel-body">
 					<div id="severity_gender_male"></div>
-					<p>Total: ${row.male}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.female}</div>
 			</div>
 		</div>
 	</div>
@@ -41,8 +41,8 @@ select * from
 				<div class="panel-heading">Other</div>
 				<div class="panel-body">
 					<div id="severity_gender_other"></div>
-					<p>Total: ${row.other}</p>
 				</div>
+				<div class="panel-footer">Total: ${row.other}</div>
 			</div>
 		</div>
 	</div>

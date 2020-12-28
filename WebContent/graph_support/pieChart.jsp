@@ -14,7 +14,7 @@ chart {
 <script>
 
 d3.json("${param.data_page}", function(error, data) {
-var width=338, //var width = parseInt(d3.select("${param.dom_element}").style("width"))-10,
+var width=325, //var width = parseInt(d3.select("${param.dom_element}").style("width"))-10,
 height = width,
 border = 10,
 radius = Math.min(width-border, height-border) / 2;
