@@ -20,13 +20,13 @@ constraints. This main landing page draws from the tiles in the respective tabs 
 					<label for="x_axis">Choose a Metric for the X Axis:</label>
 					<select name="x_axis" id="x_axis" onchange="testing(mode.value)">
 					<c:forEach items="${values.rows}" var="row" varStatus="rowCounter">
-						<option value="${row.value}" <c:if test="${'Renal' == row.value}">selected</c:if>>${row.value}</option>
+						<option value="${row.value}" <c:if test="${'DM' == row.value}">selected</c:if>>${row.value}</option>
 					</c:forEach>
 					</select>
 					<label for="y_axis">Choose a Metric for the Y Axis:</label>
 					<select name="y_axis" id="y_axis" onchange="testing(mode.value)">
 					<c:forEach items="${values.rows}" var="row" varStatus="rowCounter">
-						<option value="${row.value}" <c:if test="${'Rheumatic' == row.value}">selected</c:if>>${row.value}</option>
+						<option value="${row.value}" <c:if test="${'Pulmonary' == row.value}">selected</c:if>>${row.value}</option>
 					</c:forEach>
 					</select>
 					</form>
@@ -44,10 +44,10 @@ constraints. This main landing page draws from the tiles in the respective tabs 
 	</div>
 	
 <jsp:include page="../graph_support/scatterplot.jsp">
-	<jsp:param name="data_page"	value="feeds/charlson_scatter.jsp?x_value=Renal&y_value=Rheumatic" />
+	<jsp:param name="data_page"	value="feeds/charlson_scatter.jsp?x_value=DM&y_value=Pulmonary" />
 	<jsp:param name="dom_element" value="#scatter_plot" />
-	<jsp:param name="xLabel" value="Renal %" />
-	<jsp:param name="yLabel" value="Rheumatic %" />
+	<jsp:param name="xLabel" value="DM %" />
+	<jsp:param name="yLabel" value="Pulmonary %" />
 </jsp:include>
 
 				<script type="text/javascript">

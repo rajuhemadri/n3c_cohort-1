@@ -52,6 +52,7 @@ WebContent/graphs/severity_misc.jsp -text
 WebContent/graphs/severity_payer.jsp -text
 WebContent/graphs/severity_race.jsp -text
 WebContent/graphs/severity_smoking.jsp -text
+WebContent/graphs/tables.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text

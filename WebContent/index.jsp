@@ -6,23 +6,24 @@
 <jsp:include page="head.jsp" flush="true" />
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <!-- jQuery library -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <style type="text/css" media="all">
 @import "resources/n3c_login_style.css";
 </style>
+
 <style type="text/css">
 table.dataTable thead .sorting_asc {
 	background-image: none !important;
 }
 </style>
+
 <body>
 
 	<jsp:include page="navbar.jsp" flush="true" />
@@ -55,34 +56,7 @@ table.dataTable thead .sorting_asc {
 			</div>
 			
 			<div class="tab-pane fade" id="tables">
-
-				<div id="target_table"></div>
-				<script type="text/javascript">
-					function testing(mode) {
-						d3.html("tables/" + mode + ".jsp", function(fragment) {
-							var divContainer = document.getElementById("target_table");
-							divContainer.innerHTML = "";
-							divContainer.append(fragment);
-						});
-					}
-				</script>
-
-				<form action="index.jsp">
-					<label for="table">Choose a table:</label>
-					<select name="mode" id="mode" onchange="testing(mode.value)">
-						<option value="characteristics"	<c:if test="${empty param.mode ||  param.mode == 'characteristics' }">selected</c:if>>Characteristics</option>
-						<option value="blood" <c:if test="${param.mode == 'blood' }">selected</c:if>>Blood</option>
-						<option value="charlson" <c:if test="${param.mode == 'charlson' }">selected</c:if>>Charlson</option>
-						<option value="filled" <c:if test="${param.mode == 'filled' }">selected</c:if>>Filled</option>
-						<option value="meds" <c:if test="${param.mode == 'meds' }">selected</c:if>>Medications</option>
-						<option value="models" <c:if test="${param.mode == 'models' }">selected</c:if>>Models</option>
-						<option value="peak" <c:if test="${param.mode == 'peak' }">selected</c:if>>Peaks</option>
-						<option value="severity" <c:if test="${param.mode == 'severity' }">selected</c:if>>Severity</option>
-					</select>
-				</form>
-				<jsp:include page="tables/characteristics.jsp" flush="true" />
-				<div id="table" style="overflow: scroll;">&nbsp;</div>
-				<div id="op_table" style="overflow: scroll;">&nbsp;</div>
+				<jsp:include page="graphs/tables.jsp" flush="true" />
 			</div>
 
 			<div class="tab-pane fade" id="blood">
@@ -104,6 +78,7 @@ table.dataTable thead .sorting_asc {
 				<jsp:include page="graphs/severity.jsp" flush="true" />
 			</div>
 		</div>
+
 		<jsp:include page="footer.jsp" flush="true" />
 	</div>
 </body>
