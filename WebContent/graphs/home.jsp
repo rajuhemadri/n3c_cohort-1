@@ -37,6 +37,8 @@ constraints. This main landing page draws from the tiles in the respective tabs 
 			<div class="panel panel-primary">
 				<div class="panel-heading">Charlson Scatter Plot</div>
 				<div class="panel-body">
+					<!--  This funky little div eliminates flicker as the SVG is swapped out. Keep it slightly bigger than the scatter plot. -->
+					<div style="width:1px; height:405px; float:left;"></div>
 					<div id="scatter_plot"></div>
 				</div>
 			</div>
