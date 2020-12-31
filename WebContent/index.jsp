@@ -28,7 +28,7 @@ table.dataTable thead .sorting_asc {
 
 	<jsp:include page="navbar.jsp" flush="true" />
 
-	<div class="container center-box shadow-border">
+	<div class="container-fluid">
 		<h2 class="header-text">
 			<img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Cohort Exploration
 		</h2>
