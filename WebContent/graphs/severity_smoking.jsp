@@ -32,7 +32,6 @@ select * from
 			</div>
 		</div>
 	</div>
-	</div>
 </c:forEach>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
