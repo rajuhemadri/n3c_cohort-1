@@ -40,7 +40,7 @@ constraints. This main landing page draws from the tiles in the respective tabs 
 				<div class="panel-body">
 					<!--  This funky little div eliminates flicker as the SVG is swapped out. Keep it slightly bigger than the scatter plot. -->
 					<div id="scatter_filler" style="width:1px; height:1px; float:left;"></div>
-					<div id="scatter_panel" style="float:left;">
+					<div id="scatter_panel">
 						<div id="scatter_plot"></div>
 					</div>
 				</div>
