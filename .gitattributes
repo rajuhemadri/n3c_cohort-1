@@ -57,6 +57,7 @@ WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text
 WebContent/navbar.jsp -text
+WebContent/resources/MT.BootstrapLazyloader.js -text
 WebContent/resources/autocomplete.css -text
 WebContent/resources/autocomplete.js -text
 WebContent/resources/d3.v3.min.js -text

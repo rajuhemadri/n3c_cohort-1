@@ -26,6 +26,6 @@
 <c:forEach items="${values.rows}" var="row" varStatus="rowCounter">
 	[${row.x}, ${row.y}, "${row.label}"]<c:if test="${rowCounter.count < values.rowCount}">,</c:if>
 </c:forEach>
-];
+]
 
 			

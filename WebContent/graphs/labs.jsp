@@ -38,17 +38,17 @@
 </c:forEach>
 
 <c:forEach items="${elements.rows}" var="row" varStatus="rowCounter">
-<jsp:include page="../graph_support/smallVerticalBarChart.jsp">
+<jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="graphs/rowFreqData.jsp?column=alias&value=${row.var}&variable=Peak&table=peak_and_nadir_table_for_export" />
 	<jsp:param name="dom_element" value="#${row.id}_peak" />
 	<jsp:param name="lables" value="100" />
 	<jsp:param name="bars" value="200" />
 </jsp:include>
-<jsp:include page="../graph_support/smallVerticalBarChart.jsp">
+<jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="graphs/rowFreqData.jsp?column=alias&value=${row.var}&variable=Average&table=peak_and_nadir_table_for_export" />
 	<jsp:param name="dom_element" value="#${row.id}_average" />
 </jsp:include>
-<jsp:include page="../graph_support/smallVerticalBarChart.jsp">
+<jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="graphs/rowFreqData.jsp?column=alias&value=${row.var}&variable=Nadir&table=peak_and_nadir_table_for_export" />
 	<jsp:param name="dom_element" value="#${row.id}_nadir" />
 </jsp:include>

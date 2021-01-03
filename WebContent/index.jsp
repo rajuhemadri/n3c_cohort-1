@@ -14,6 +14,8 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<script src="resources/MT.BootstrapLazyloader.js"></script>
+
 <style type="text/css" media="all">
 @import "resources/n3c_login_style.css";
 </style>
@@ -39,7 +41,7 @@ table.dataTable thead .sorting_asc {
 				tracking issue.</a>
 		</div>
 		<p>&nbsp;</p>
-		<ul class="nav nav-tabs" style="font-size: 16px;">
+		<ul class="nav nav-tabs lazyload" style="font-size: 16px;">
 			<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
 			<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
 			<li><a data-toggle="tab" href="#blood">Blood</a></li>
