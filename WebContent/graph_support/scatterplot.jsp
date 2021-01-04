@@ -31,6 +31,7 @@ d3.json("${param.data_page}", function(error, dataset) {
 				console.log('${param.dom_element} width '+newWidth);
 				w = newWidth;
 				h = newWidth;
+				padding = newWidth / 5;
 				draw();
 			}
 		});
