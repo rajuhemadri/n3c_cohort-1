@@ -1,4 +1,5 @@
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
+
 <style>
 chart {
 	font: 10px sans-serif;
@@ -10,7 +11,6 @@ chart {
 }
 </style>
 
-<script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
 d3.json("${param.data_page}", function(error, data) {

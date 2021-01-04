@@ -16,6 +16,8 @@
 
 <script src="resources/MT.BootstrapLazyloader.js"></script>
 
+<script src="resources/d3.v3.min.js"></script>
+
 <style type="text/css" media="all">
 @import "resources/n3c_login_style.css";
 </style>

@@ -13,7 +13,7 @@
 	font-size: 11px;
 }
 </style>
-<script src="https://d3js.org/d3.v3.min.js"></script>
+
 <script type="text/javascript">
 
 d3.json("${param.data_page}", function(error, dataset) {

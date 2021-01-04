@@ -1,5 +1,5 @@
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
-<script src="https://d3js.org/d3.v3.min.js"></script>
+
 <script>
 //accessor functions
 var barLabel = function(d) { return d.element; };
