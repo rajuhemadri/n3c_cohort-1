@@ -51,6 +51,7 @@ table.dataTable thead .sorting_asc {
 			<li><a data-toggle="tab" href="#medications">Medications</a></li>
 			<li><a data-toggle="tab" href="#labs">Labs</a></li>
 			<li><a data-toggle="tab" href="#severity">Severity</a></li>
+			<li><a data-toggle="tab" href="#scatter">Scatter Plots</a></li>
 			<li><a data-toggle="tab" href="#tables">Tables</a></li>
 		</ul>
 
@@ -80,6 +81,9 @@ table.dataTable thead .sorting_asc {
 			</div>
 			<div class="tab-pane fade" id="severity">
 				<jsp:include page="graphs/severity.jsp" flush="true" />
+			</div>
+			<div class="tab-pane fade" id="scatter">
+				<jsp:include page="graphs/scatter.jsp" flush="true" />
 			</div>
 		</div>
 
