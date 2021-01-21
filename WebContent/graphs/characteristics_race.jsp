@@ -5,10 +5,7 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as amind from enclave_cohort.all_patient_characteristics_by_covid_status where value='American Indian or Alaska Native') as amind
-	left join
 	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as asian from enclave_cohort.all_patient_characteristics_by_covid_status where value='Asian') as asian
-	on true
 	left join
 	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as black from enclave_cohort.all_patient_characteristics_by_covid_status where value='Black or African American') as black
 	on true
@@ -30,15 +27,6 @@ select * from
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-primary">
-				<div class="panel-heading">American Indian or Alaska Native</div>
-				<div class="panel-body">
-					<div id="race_amind"></div>
-				</div>
-				<div class="panel-footer">Overall: ${row.amind}</div>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="panel panel-primary">
 				<div class="panel-heading">Asian</div>
 				<div class="panel-body">
 					<div id="race_asian"></div>
@@ -46,8 +34,6 @@ select * from
 				<div class="panel-footer">Overall: ${row.asian}</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-primary">
 				<div class="panel-heading">Black or African American</div>
@@ -66,8 +52,6 @@ select * from
 				<div class="panel-footer">Overall: ${row.unknown}</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-primary">
 				<div class="panel-heading">Native Hawaiian or Other Pacific Islander</div>
@@ -86,8 +70,6 @@ select * from
 				<div class="panel-footer">Overall: ${row.other}</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-primary">
 				<div class="panel-heading">White</div>
@@ -99,11 +81,6 @@ select * from
 		</div>
 	</div>
 </c:forEach>
-
-<jsp:include page="../graph_support/verticalBarChart.jsp">
-	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=American+Indian+or+Alaska+Native" />
-	<jsp:param name="dom_element" value="#race_amind" />
-</jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=Asian" />

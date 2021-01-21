@@ -85,6 +85,9 @@ table.dataTable thead .sorting_asc {
 			<div class="tab-pane fade" id="scatter">
 				<jsp:include page="graphs/scatter.jsp" flush="true" />
 			</div>
+			<div class="tab-pane fade" id="tables">
+				<jsp:include page="graphs/tables.jsp" flush="true" />
+			</div>
 		</div>
 
 		<jsp:include page="footer.jsp" flush="true" />
