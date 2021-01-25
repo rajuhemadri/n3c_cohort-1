@@ -17,6 +17,7 @@
 <script src="resources/MT.BootstrapLazyloader.js"></script>
 
 <script src="resources/d3.v3.min.js"></script>
+<script src="resources/d3.tip.v0.6.3.js"></script>
 
 <style type="text/css" media="all">
 @import "resources/n3c_login_style.css";
@@ -46,7 +47,7 @@ table.dataTable thead .sorting_asc {
 		<ul class="nav nav-tabs lazyload" style="font-size: 16px;">
 			<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
 			<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
-			<li><a data-toggle="tab" href="#blood">Blood</a></li>
+			<li><a data-toggle="tab" href="#blood">Blood Type</a></li>
 			<li><a data-toggle="tab" href="#charlson">Charlson</a></li>
 			<li><a data-toggle="tab" href="#medications">Medications</a></li>
 			<li><a data-toggle="tab" href="#labs">Labs</a></li>

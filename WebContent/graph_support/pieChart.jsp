@@ -63,9 +63,48 @@ d3.json("${param.data_page}", function(error, data) {
 			.enter().append("g")
 			.attr("class", "arc");
 
-		g.append("path")
+		var tooltip = d3.select("${param.dom_element}")
+		.append('div')
+		.attr('class', 'tooltip');
+
+
+		tooltip.append('div')
+		.attr('class', 'label');
+
+		tooltip.append('div')
+		.attr('class', 'count');
+
+		tooltip.append('div')
+		.attr('class', 'percent');
+
+		var path = g.append("path")
 			.attr("d", arc)
 			.style("fill", function(d) { return color(d.data.element); });
+
+		path.on('mouseover', function(d) {
+			var total = d3.sum(data.map(function(d) {
+				return d.count;
+			}));
+
+			var percent = Math.round(1000 * d.data.count / total) / 10;
+			tooltip.select('.label').html(d.data.element).style('color','black').style("font-size", "14px");
+			tooltip.select('.count').html(d.data.count + " patients");
+			tooltip.select('.percent').html(percent + '% of category');
+
+			tooltip.style('display', 'block');
+			tooltip.style('opacity',2);
+
+		});
+
+		path.on('mousemove', function(d) {
+			tooltip.style('top', (d3.event.layerY + 10) + 'px')
+			.style('left', (d3.event.layerX - 25) + 'px');
+		});
+
+		path.on('mouseout', function() {
+			tooltip.style('display', 'none');
+			tooltip.style('opacity',0);
+		});
 
 		g.append("text")
 			.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })

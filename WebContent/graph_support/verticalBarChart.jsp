@@ -42,10 +42,21 @@ d3.json("${param.data_page}", function(data) {
 		var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
 		var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
 
+		var tip = d3.tip()
+		  .attr('class', 'd3-tip')
+		  .offset([-10, 0])
+		  .html(function(d) {
+		    return "<strong>Frequency:</strong> <span style='color:red'>" + d.count + "</span>";
+		  })
+
 		// svg container element
 		var chart = d3.select("${param.dom_element}").append("svg")
 			.attr('width', maxBarWidth + barLabelWidth + barLabelPadding + valueLabelWidth)
 			.attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
+		
+		// activate the tip
+		chart.call(tip);
+		
 		// grid line labels
 		var gridContainer = chart.append('g')
 			.attr('transform', 'translate(' + barLabelWidth + ',' + gridLabelHeight + ')');
@@ -75,11 +86,14 @@ d3.json("${param.data_page}", function(data) {
 		var barsContainer = chart.append('g')
 			.attr('transform', 'translate(' + barLabelWidth + ',' + (gridLabelHeight + gridChartOffset) + ')');
 		barsContainer.selectAll("rect").data(data).enter().append("rect")
+			.attr('class', 'bar')
 			.attr('y', y)
 			.attr('height', yScale.rangeBand())
 			.attr('width', function(d) { return x(barValue(d)); })
 			.attr('stroke', 'white')
-			.attr('fill', '#376076');
+			.attr('fill', '#376076')
+	        .on('mouseover', tip.show)
+	        .on('mouseout', tip.hide);
 		// bar value labels
 		barsContainer.selectAll("text").data(data).enter().append("text")
 			.attr("x", function(d) { return x(barValue(d)); })
