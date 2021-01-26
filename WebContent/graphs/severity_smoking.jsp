@@ -37,9 +37,11 @@ select * from
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=smoking_status&value=Current or Former" />
 	<jsp:param name="dom_element" value="#severity_smoking_current" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=smoking_status&value=Non smoker" />
 	<jsp:param name="dom_element" value="#severity_smoking_non" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>

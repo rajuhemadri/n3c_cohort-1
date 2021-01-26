@@ -26,7 +26,6 @@ rect.disabled {
 }
 .d3-tip {
   line-height: 1;
-  font-weight: bold;
   padding: 12px;
   background: #eee;
   color: #333;
@@ -54,7 +53,7 @@ rect.disabled {
 }
 
 .bar:hover {
-  fill: #ff8c00 ;
+  fill: #d0743c ;
 }
 
 /* -------------- Main ---------------------  */

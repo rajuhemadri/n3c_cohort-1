@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 
 <script>
@@ -42,20 +43,28 @@ d3.json("${param.data_page}", function(data) {
 		var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
 		var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
 
-		var tip = d3.tip()
-		  .attr('class', 'd3-tip')
-		  .offset([-10, 0])
-		  .html(function(d) {
-		    return "<strong>Frequency:</strong> <span style='color:red'>" + d.count + "</span>";
-		  })
-
 		// svg container element
 		var chart = d3.select("${param.dom_element}").append("svg")
 			.attr('width', maxBarWidth + barLabelWidth + barLabelPadding + valueLabelWidth)
 			.attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
 		
-		// activate the tip
-		chart.call(tip);
+		<c:choose>
+			<c:when test="${param.html ==  'percentage'}">
+				var tip = d3.tip()
+				  .attr('class', 'd3-tip')
+				  .offset([-10, 0])
+				  .html(function(d) {
+						var total = d3.sum(data.map(function(d) {
+							return d.count;
+						}));
+						var percent = Math.round(1000 * d.count / total) / 10;
+				    return "<strong>" + d.element + "</strong><br>" + d.count + " patients<br>" + percent + "% of  category";
+				  })
+		
+				// activate the tip
+				chart.call(tip);
+			</c:when>
+			</c:choose>
 		
 		// grid line labels
 		var gridContainer = chart.append('g')
@@ -92,8 +101,11 @@ d3.json("${param.data_page}", function(data) {
 			.attr('width', function(d) { return x(barValue(d)); })
 			.attr('stroke', 'white')
 			.attr('fill', '#376076')
-	        .on('mouseover', tip.show)
-	        .on('mouseout', tip.hide);
+			<c:if test="${not empty param.html}">
+		        .on('mouseover', tip.show)
+		        .on('mouseout', tip.hide)
+	        </c:if>
+	        ;
 		// bar value labels
 		barsContainer.selectAll("text").data(data).enter().append("text")
 			.attr("x", function(d) { return x(barValue(d)); })

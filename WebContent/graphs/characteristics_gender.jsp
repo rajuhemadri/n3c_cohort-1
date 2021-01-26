@@ -51,15 +51,18 @@ select * from
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=gender_concept_name&value=FEMALE" />
 	<jsp:param name="dom_element" value="#gender_female" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=gender_concept_name&value=MALE" />
 	<jsp:param name="dom_element" value="#gender_male" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=gender_concept_name&value=Other" />
 	<jsp:param name="dom_element" value="#gender_other" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 

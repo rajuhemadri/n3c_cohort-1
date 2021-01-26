@@ -85,29 +85,35 @@ select * from
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=Asian" />
 	<jsp:param name="dom_element" value="#race_asian" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=Black+or+African+American" />
 	<jsp:param name="dom_element" value="#race_black" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=Missing/Unknown" />
 	<jsp:param name="dom_element" value="#race_missing" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=Native+Hawaiian+or+Other+Pacific+Islander" />
 	<jsp:param name="dom_element" value="#race_hawaiian" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=Other" />
 	<jsp:param name="dom_element" value="#race_other" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Race&value=White" />
 	<jsp:param name="dom_element" value="#race_white" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>

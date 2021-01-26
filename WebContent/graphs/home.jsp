@@ -140,19 +140,23 @@ select * from
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=Race&value=Black+or+African+American" />
 	<jsp:param name="dom_element" value="#home_race_black" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=Race&value=White" />
 	<jsp:param name="dom_element" value="#home_race_white" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=payer_concept_name&value=Medicaid" />
 	<jsp:param name="dom_element" value="#home_payer_medicaid" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/severity_detail.jsp?variable=payer_concept_name&value=Private Health Insurance" />
 	<jsp:param name="dom_element" value="#home_payer_private" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>

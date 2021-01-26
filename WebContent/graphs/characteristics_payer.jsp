@@ -63,20 +63,24 @@ select * from
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=payer_concept_name&value=Medicaid" />
 	<jsp:param name="dom_element" value="#payer_medicaid" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=payer_concept_name&value=Medicare" />
 	<jsp:param name="dom_element" value="#payer_medicare" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=payer_concept_name&value=Other Payer" />
 	<jsp:param name="dom_element" value="#payer_other" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=payer_concept_name&value=Private Health Insurance" />
 	<jsp:param name="dom_element" value="#payer_private" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 

@@ -51,15 +51,18 @@ select * from
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Ethnicity&value=Hispanic or Latino" />
 	<jsp:param name="dom_element" value="#ethnicity_hispanic" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Ethnicity&value=Not+Hispanic or Latino" />
 	<jsp:param name="dom_element" value="#ethnicity_not" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart.jsp">
 	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=Ethnicity&value=Missing/Unknown" />
 	<jsp:param name="dom_element" value="#ethnicity_missing" />
+	<jsp:param name="html" value="percentage" />
 </jsp:include>
 
