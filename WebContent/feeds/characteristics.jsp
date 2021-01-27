@@ -2,7 +2,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 <sql:query var="projects" dataSource="jdbc/N3CCohort">
-	select jsonb_pretty(jsonb_agg(all_patient_characteristics_by_covid_status)) from enclave_cohort.all_patient_characteristics_by_covid_status;
+	select jsonb_pretty(jsonb_agg(table_1__table_of_all_patient_characteristics_by_covid_statu)) from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu;
 </sql:query>
 {
     "headers": [

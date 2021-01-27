@@ -5,30 +5,30 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as a_neg from enclave_cohort.censored_blood_type_for_api where value='A Neg') as a_neg
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as a_neg from enclave_cohort.censored_blood_type_for_api where value='A Neg') as a_neg
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as a_pos from enclave_cohort.censored_blood_type_for_api where value='A Pos') as a_pos
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as a_pos from enclave_cohort.censored_blood_type_for_api where value='A Pos') as a_pos
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as ab_neg from enclave_cohort.censored_blood_type_for_api where value='AB Neg') as ab_neg
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as ab_neg from enclave_cohort.censored_blood_type_for_api where value='AB Neg') as ab_neg
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as ab_pos from enclave_cohort.censored_blood_type_for_api where value='AB Pos') as ab_pos
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as ab_pos from enclave_cohort.censored_blood_type_for_api where value='AB Pos') as ab_pos
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as b_neg from enclave_cohort.censored_blood_type_for_api where value='B Neg') as b_neg
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as b_neg from enclave_cohort.censored_blood_type_for_api where value='B Neg') as b_neg
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as b_pos from enclave_cohort.censored_blood_type_for_api where value='B Pos') as b_pos
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as b_pos from enclave_cohort.censored_blood_type_for_api where value='B Pos') as b_pos
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as o_neg from enclave_cohort.censored_blood_type_for_api where value='O Neg') as o_neg
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as o_neg from enclave_cohort.censored_blood_type_for_api where value='O Neg') as o_neg
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as o_pos from enclave_cohort.censored_blood_type_for_api where value='O Pos') as o_pos
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as o_pos from enclave_cohort.censored_blood_type_for_api where value='O Pos') as o_pos
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999') as unknown from enclave_cohort.censored_blood_type_for_api where value='Unknown') as unknown
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999') as unknown from enclave_cohort.censored_blood_type_for_api where value='Unknown') as unknown
 	on true
 </sql:query>
 

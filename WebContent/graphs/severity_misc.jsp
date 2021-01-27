@@ -5,18 +5,18 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as bmi from enclave_cohort.severity_table2_for_export where variable='BMI') as bmi
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as bmi from enclave_cohort.severity_table2_for_export where variable='BMI') as bmi
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as stay from enclave_cohort.severity_table2_for_export where variable='length_of_stay') as stay
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as stay from enclave_cohort.severity_table2_for_export where variable='length_of_stay') as stay
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as weight from enclave_cohort.severity_table2_for_export where variable='Weight') as weight
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as weight from enclave_cohort.severity_table2_for_export where variable='Weight') as weight
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as age from enclave_cohort.severity_table2_for_export where variable='age_at_visit_start_in_years_int') as age
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as age from enclave_cohort.severity_table2_for_export where variable='age_at_visit_start_in_years_int') as age
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,990.99') as qscore from enclave_cohort.severity_table2_for_export where variable='Q_Score') as qscore
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,990.99') as qscore from enclave_cohort.severity_table2_for_export where variable='Q_Score') as qscore
 	on true
 </sql:query>
 

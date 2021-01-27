@@ -5,9 +5,9 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999') as smoker from enclave_cohort.severity_table2_for_export where value='Current or Former') as smoker
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999') as smoker from enclave_cohort.severity_table2_for_export where value='Current or Former') as smoker
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999') as non from enclave_cohort.severity_table2_for_export where value='Non smoker') as non
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999') as non from enclave_cohort.severity_table2_for_export where value='Non smoker') as non
 	on true
 </sql:query>
 

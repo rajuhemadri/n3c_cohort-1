@@ -5,12 +5,12 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as female from enclave_cohort.all_patient_characteristics_by_covid_status where value='FEMALE') as female
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as female from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='FEMALE') as female
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as male from enclave_cohort.all_patient_characteristics_by_covid_status where value='MALE') as mail
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as male from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='MALE') as mail
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.all_patient_characteristics_by_covid_status where value='Other' and variable='gender_concept_name') as other
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Other' and variable='gender_concept_name') as other
 	on true
 </sql:query>
 

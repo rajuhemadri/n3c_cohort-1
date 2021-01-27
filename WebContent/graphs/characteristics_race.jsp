@@ -5,21 +5,21 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as asian from enclave_cohort.all_patient_characteristics_by_covid_status where value='Asian') as asian
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as asian from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Asian') as asian
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as black from enclave_cohort.all_patient_characteristics_by_covid_status where value='Black or African American') as black
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as black from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Black or African American') as black
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.all_patient_characteristics_by_covid_status where value='Missing/Unknown' and variable='Race') as unknown
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Missing/Unknown' and variable='Race') as unknown
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as hawaiian from enclave_cohort.all_patient_characteristics_by_covid_status where value='Native Hawaiian or Other Pacific Islander') as hawaiian
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as hawaiian from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Native Hawaiian or Other Pacific Islander') as hawaiian
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.all_patient_characteristics_by_covid_status where value='Other' and variable='Race') as other
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Other' and variable='Race') as other
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as white from enclave_cohort.all_patient_characteristics_by_covid_status where value='White') as white
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as white from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='White') as white
 	on true
 </sql:query>
 

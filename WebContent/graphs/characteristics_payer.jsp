@@ -5,15 +5,15 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as medicaid from enclave_cohort.all_patient_characteristics_by_covid_status where value='Medicaid') as medicaid
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as medicaid from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Medicaid') as medicaid
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as medicare from enclave_cohort.all_patient_characteristics_by_covid_status where value='Medicare') as medicare
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as medicare from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Medicare') as medicare
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.all_patient_characteristics_by_covid_status where value='Other Payer') as other
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as other from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Other Payer') as other
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as priv from enclave_cohort.all_patient_characteristics_by_covid_status where value='Private Health Insurance') as private
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as priv from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Private Health Insurance') as private
 	on true
 </sql:query>
 

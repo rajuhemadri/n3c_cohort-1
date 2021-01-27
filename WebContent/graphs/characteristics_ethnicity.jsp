@@ -5,12 +5,12 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as hispanic from enclave_cohort.all_patient_characteristics_by_covid_status where value='Hispanic or Latino') as hispanic
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as hispanic from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Hispanic or Latino') as hispanic
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as non from enclave_cohort.all_patient_characteristics_by_covid_status where value='Not Hispanic or Latino') as non
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as non from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Not Hispanic or Latino') as non
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.all_patient_characteristics_by_covid_status where value='Missing/Unknown' and variable='Ethnicity') as unknown
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where value='Missing/Unknown' and variable='Ethnicity') as unknown
 	on true
 </sql:query>
 

@@ -4,7 +4,7 @@
 <h3>Charlson Frequency</h3>
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
-	select to_char(substring(x__all from '[0-9]+')::int,'999,999') as x__all, to_char(substring(mild from '[0-9]+')::int,'999,999') as mild,
+	select to_char(substring(x__all::text from '[0-9]+')::int,'999,999') as x__all, to_char(substring(mild from '[0-9]+')::int,'999,999') as mild,
 	       to_char(substring(mild_ed from '[0-9]+')::int,'999,999') as mild_ed, to_char(substring(moderate from '[0-9]+')::int,'999,999') as moderate,
 	       to_char(substring(severe from '[0-9]+')::int,'999,999') as severe, to_char(substring(dead_w_covid from '[0-9]+')::int,'999,999') as dead_w_covid
 	from enclave_cohort.charlson_frequency_for_export where value='Totals';

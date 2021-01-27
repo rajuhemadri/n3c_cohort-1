@@ -36,6 +36,7 @@ d3.json("${param.data_page}", function(error, data) {
 	draw();
 
 	function draw() {
+		var formatComma = d3.format(",");
 		var radius = Math.min(width - border, height - border) / 2;
 		var color = d3.scale.ordinal()
 			.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
@@ -88,7 +89,7 @@ d3.json("${param.data_page}", function(error, data) {
 
 			var percent = Math.round(1000 * d.data.count / total) / 10;
 			tooltip.select('.label').html(d.data.element).style('color','black').style("font-size", "14px");
-			tooltip.select('.count').html(d.data.count + " patients");
+			tooltip.select('.count').html(formatComma(d.data.count) + " patients");
 			tooltip.select('.percent').html(percent + '% of category');
 
 			tooltip.style('display', 'block');

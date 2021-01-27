@@ -5,15 +5,15 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as bmi from enclave_cohort.all_patient_characteristics_by_covid_status where variable='BMI') as bmi
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as bmi from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where variable='BMI') as bmi
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as testcount from enclave_cohort.all_patient_characteristics_by_covid_status where variable='Testcount') as testcount
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as testcount from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where variable='Testcount') as testcount
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as weight from enclave_cohort.all_patient_characteristics_by_covid_status where variable='Weight') as weight
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as weight from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where variable='Weight') as weight
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9.]+')::float, '999,999,999.99') as age from enclave_cohort.all_patient_characteristics_by_covid_status where variable='age_at_visit_start_in_years_int') as age
+	(select to_char(substring(x__all::text from '[0-9.]+')::float, '999,999,999.99') as age from enclave_cohort.table_1__table_of_all_patient_characteristics_by_covid_statu where variable='age_at_visit_start_in_years_int') as age
 	on true
 </sql:query>
 

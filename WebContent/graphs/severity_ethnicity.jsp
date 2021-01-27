@@ -5,12 +5,12 @@
 
 <sql:query var="elements" dataSource="jdbc/N3CCohort">
 select * from 
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as hispanic from enclave_cohort.severity_table2_for_export where value='Hispanic or Latino') as hispanic
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as hispanic from enclave_cohort.severity_table2_for_export where value='Hispanic or Latino') as hispanic
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as non from enclave_cohort.severity_table2_for_export where value='Not Hispanic or Latino') as non
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as non from enclave_cohort.severity_table2_for_export where value='Not Hispanic or Latino') as non
 	on true
 	left join
-	(select to_char(substring(x__all from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.severity_table2_for_export where value='Missing/Unknown' and variable='Ethnicity') as unknown
+	(select to_char(substring(x__all::text from '[0-9]+')::int, '999,999,999') as unknown from enclave_cohort.severity_table2_for_export where value='Missing/Unknown' and variable='Ethnicity') as unknown
 	on true
 </sql:query>
 

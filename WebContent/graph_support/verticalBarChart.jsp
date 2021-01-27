@@ -11,7 +11,7 @@ d3.json("${param.data_page}", function(data) {
 	var barHeight = 20; // height of one bar
 	var barLabelWidth = 10; // space reserved for bar labels
 	var barLabelPadding = 5; // padding between bar and bar labels (left)
-	var gridLabelHeight = 18; // space reserved for gridline labels
+	var gridLabelHeight = 0; // space reserved for gridline labels
 	var gridChartOffset = 3; // space between start of grid and first bar
 	var maxBarWidth = 280; // width of the bar with the max value
 
@@ -36,6 +36,7 @@ d3.json("${param.data_page}", function(data) {
 	draw();
 
 	function draw() {
+		var formatComma = d3.format(",");
 
 		// scales
 		var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
@@ -58,7 +59,7 @@ d3.json("${param.data_page}", function(data) {
 							return d.count;
 						}));
 						var percent = Math.round(1000 * d.count / total) / 10;
-				    return "<strong>" + d.element + "</strong><br>" + d.count + " patients<br>" + percent + "% of  category";
+				    return "<strong>" + d.element + "</strong><br>" + formatComma(d.count) + " patients<br>" + percent + "% of  category";
 				  })
 		
 				// activate the tip
@@ -66,21 +67,6 @@ d3.json("${param.data_page}", function(data) {
 			</c:when>
 			</c:choose>
 		
-		// grid line labels
-		var gridContainer = chart.append('g')
-			.attr('transform', 'translate(' + barLabelWidth + ',' + gridLabelHeight + ')');
-		gridContainer.selectAll("text").data(x.ticks(10)).enter().append("text")
-			.attr("x", x)
-			.attr("dy", -3)
-			.attr("text-anchor", "middle")
-			.text(String);
-		// vertical grid lines
-		gridContainer.selectAll("line").data(x.ticks(10)).enter().append("line")
-			.attr("x1", x)
-			.attr("x2", x)
-			.attr("y1", 0)
-			.attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
-			.style("stroke", "#ccc");
 		// bar labels
 		var labelsContainer = chart.append('g')
 			.attr('transform', 'translate(' + (barLabelWidth - barLabelPadding) + ',' + (gridLabelHeight + gridChartOffset) + ')');
@@ -115,7 +101,7 @@ d3.json("${param.data_page}", function(data) {
 			.attr("text-anchor", "start") // text-align: right
 			.attr("fill", "black")
 			.attr("stroke", "none")
-			.text(function(d) { return d3.round(barValue(d), 2); });
+			.text(function(d) { return formatComma(d3.round(barValue(d), 2)); });
 		// start line
 		barsContainer.append("line")
 			.attr("y1", -gridChartOffset)
