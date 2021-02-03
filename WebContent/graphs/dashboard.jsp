@@ -46,7 +46,7 @@
 <div class="row row-no-gutters">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">Lab-confirmed Negative</div>
+			<div class="panel-heading text-center">Lab-confirmed Negative</div>
 			<div class="panel-body">
 				<div id="demographic-negative"></div>
 			</div>
@@ -54,7 +54,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">Lab-confirmed Positive</div>
+			<div class="panel-heading text-center">Lab-confirmed Positive</div>
 			<div class="panel-body">
 				<div id="demographic-positive"></div>
 			</div>
@@ -62,7 +62,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">No COVID Test</div>
+			<div class="panel-heading text-center">No COVID Test</div>
 			<div class="panel-body">
 				<div id="demographic-none"></div>
 			</div>
@@ -70,7 +70,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">Suspected COVID</div>
+			<div class="panel-heading text-center">Suspected COVID</div>
 			<div class="panel-body">
 				<div id="demographic-suspected"></div>
 			</div>
@@ -83,7 +83,7 @@
 <div class="row row-no-gutters">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">Lab-confirmed Negative</div>
+			<div class="panel-heading text-center">Lab-confirmed Negative</div>
 			<div class="panel-body">
 				<div id="race-negative"></div>
 			</div>
@@ -91,7 +91,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">Lab-confirmed Positive</div>
+			<div class="panel-heading text-center">Lab-confirmed Positive</div>
 			<div class="panel-body">
 				<div id="race-positive"></div>
 			</div>
@@ -99,7 +99,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">No COVID Test</div>
+			<div class="panel-heading text-center">No COVID Test</div>
 			<div class="panel-body">
 				<div id="race-none"></div>
 			</div>
@@ -107,7 +107,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
-			<div class="panel-heading">Suspected COVID</div>
+			<div class="panel-heading text-center">Suspected COVID</div>
 			<div class="panel-body">
 				<div id="race-suspected"></div>
 			</div>
