@@ -80,16 +80,45 @@ d3.json("${param.data_page}", function(data) {
 			.range([h, 0], 0.1);
 		
 		
-		// SET UP AXES
+		// GRIDLINES ********************************************************************
+		// gridlines in y axis function
+		function make_y_gridlines() {		
+		    return d3.axisLeft(yScale)
+		        .tickValues(yScale.domain().filter(function(d,i){ return !(i%10)}));
+		}
+
+
+	  	// add the Y gridlines
+	  	
+	  	svg.append("g")			
+	     	.attr("class", "grid")
+	     	.call(make_y_gridlines()
+	    		.tickSize(-pointA)
+          		.tickFormat("")
+	      )
+	      
+	      svg.append("g")			
+	     	.attr("class", "grid")
+	     	.attr('transform', translation(pointB, 0))
+	     	.call(make_y_gridlines()
+	    		.tickSize(-pointA)
+          		.tickFormat("")
+          		
+	      )
+
+		
+		// SET UP AXES ********************************************************************
 		var yAxisLeft = d3.axisRight()
 			.scale(yScale)
 			.tickSize(4, 0)
-			.tickPadding(margin.middle - 4);
+			.tickPadding(margin.middle - 4)
+			.tickValues(yScale.domain().filter(function(d,i){ return !(i%10)}));
 		
 		var yAxisRight = d3.axisLeft()
 			.scale(yScale)
 			.tickSize(4, 0)
-			.tickFormat('');
+			.tickFormat('')
+			.tickValues(yScale.domain().filter(function(d,i){ return !(i%10)}));;
 		
 		var xAxisRight = d3.axisBottom()
 			.scale(xScale)
@@ -97,9 +126,13 @@ d3.json("${param.data_page}", function(data) {
 		
 		var xAxisLeft = d3.axisBottom()
 			// REVERSE THE X-AXIS SCALE ON THE LEFT SIDE BY REVERSING THE RANGE
-			.scale(xScale.copy().range([pointA, 0]))
+			.scale(xScale.copy().range([pointA-4, 0]))
 			.ticks(4);
+
+
 		
+		
+	    // Labels ********************************************************************
 		svg.append("text")
         .attr("transform", "translate(" + (w * .25) + " ," + 0 + ")")
         .style("text-anchor", "middle")
