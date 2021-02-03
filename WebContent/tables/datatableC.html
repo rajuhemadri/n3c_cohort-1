@@ -1,0 +1,46 @@
+﻿  <script id="code">
+  var dataSet = { "headers": [ {"value":"value", "label":"Value"}, {"value":"x__all", "label":"All"}, {"value":"mild", "label":"Mild"}, {"value":"mild_ed", "label":"Mild ED"}, {"value":"moderate", "label":"Moderate"}, {"value":"severe", "label":"Severe"}, {"value":"dead_w_covid", "label":"Dead w/ COVID"} ], "rows" : [ { "mild": "(n = 171567)", "value": "Totals", "severe": "(n = 3267)", "x__all": "(n = 241011)", "mild_ed": "(n = 26842)", "moderate": "(n = 34809)", "dead_w_covid": "(n = 4526)" }, { "mild": "0.235%", "value": "HIV", "severe": "0.367%", "x__all": "0.329%", "mild_ed": "0.495%", "moderate": "0.644%", "dead_w_covid": "0.442%" }, { "mild": "0.565%", "value": "Mets", "severe": "1.347%", "x__all": "0.842%", "mild_ed": "0.488%", "moderate": "1.999%", "dead_w_covid": "4.154%" }, { "mild": "0.483%", "value": "PUD", "severe": "1.500%", "x__all": "0.716%", "mild_ed": "0.700%", "moderate": "1.583%", "dead_w_covid": "2.408%" }, { "mild": "0.221%", "value": "LiverSevere", "severe": "1.592%", "x__all": "0.473%", "mild_ed": "0.332%", "moderate": "1.367%", "dead_w_covid": "3.160%" }, { "mild": "0.245%", "value": "Paralysis", "severe": "1.990%", "x__all": "0.558%", "mild_ed": "0.414%", "moderate": "1.732%", "dead_w_covid": "3.182%" }, { "mild": "1.762%", "value": "CHF", "severe": "12.427%", "x__all": "3.882%", "mild_ed": "2.876%", "moderate": "11.727%", "dead_w_covid": "23.730%" }, { "mild": "2.476%", "value": "DMcx", "severe": "13.101%", "x__all": "4.543%", "mild_ed": "4.053%", "moderate": "12.158%", "dead_w_covid": "21.056%" }, { "mild": "2.634%", "value": "Renal", "severe": "14.172%", "x__all": "5.057%", "mild_ed": "3.893%", "moderate": "14.100%", "dead_w_covid": "27.684%" }, { "mild": "7.979%", "value": "Pulmonary", "severe": "15.580%", "x__all": "10.216%", "mild_ed": "11.888%", "moderate": "17.771%", "dead_w_covid": "23.089%" }, { "mild": "0.477%", "value": "Dementia", "severe": "2.908%", "x__all": "1.319%", "mild_ed": "0.734%", "moderate": "4.122%", "dead_w_covid": "14.030%" }, { "mild": "7.744%", "value": "DM", "severe": "28.497%", "x__all": "11.493%", "mild_ed": "11.925%", "moderate": "25.108%", "dead_w_covid": "34.048%" }, { "mild": "7.944%", "value": "Any_DM", "severe": "29.140%", "x__all": "11.771%", "mild_ed": "12.104%", "moderate": "25.697%", "dead_w_covid": "35.241%" }, { "mild": "2.187%", "value": "Rheumatic", "severe": "4.071%", "x__all": "2.663%", "mild_ed": "2.682%", "moderate": "4.551%", "dead_w_covid": "5.015%" }, { "mild": "0.958%", "value": "MI", "severe": "6.336%", "x__all": "2.021%", "mild_ed": "1.844%", "moderate": "5.757%", "dead_w_covid": "11.511%" }, { "mild": "2.253%", "value": "LiverMild", "severe": "6.550%", "x__all": "3.242%", "mild_ed": "3.472%", "moderate": "6.915%", "dead_w_covid": "8.727%" }, { "mild": "2.293%", "value": "Any_Liver", "severe": "6.826%", "x__all": "3.320%", "mild_ed": "3.513%", "moderate": "7.110%", "dead_w_covid": "9.412%" }, { "mild": "3.541%", "value": "Cancer", "severe": "7.713%", "x__all": "4.823%", "mild_ed": "3.886%", "moderate": "10.107%", "dead_w_covid": "16.262%" }, { "mild": "3.562%", "value": "Any_Cancer", "severe": "7.775%", "x__all": "4.856%", "mild_ed": "3.908%", "moderate": "10.190%", "dead_w_covid": "16.372%" }, { "mild": "1.964%", "value": "Stroke", "severe": "9.183%", "x__all": "3.601%", "mild_ed": "3.312%", "moderate": "9.546%", "dead_w_covid": "17.654%" }, { "mild": "3.077%", "value": "PVD", "severe": "9.703%", "x__all": "4.962%", "mild_ed": "4.966%", "moderate": "11.836%", "dead_w_covid": "20.128%" } ] }
+
+    function init() {
+	  $.each(dataSet.rows, function(i,e){
+     $('#example-tbody').append('<tr id="row'+i.toString()+'"></tr>' );
+	 row = $('#row'+i);
+	 row.append('<td>'+e.value+'</td>');
+	 row.append('<td>'+e.mild+'</td>');
+	 row.append('<td>'+e.mild_ed+'</td>');
+	 row.append('<td>'+e.moderate+'</td>');
+	 row.append('<td>'+e.severe+'</td>');
+	 row.append('<td>'+e.dead_w_covid+'</td>');
+	 row.append('<td>'+e.x__all+'</td>');
+	 row.append('<td>'+'missing'+'</td>');
+	});
+	$('#example').DataTable( {
+        //data: dataSet.rows,        
+    } );
+      }
+  </script>
+<div id="table-container">
+<table id="example">
+<thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2">Mild</th>
+                <th colspan="3">Hospitalized</th>
+				<th>All COVID Positive</th>
+				<th>All Hospitalized</th>
+            </tr>
+            <tr>
+                <th>Outpatient (no ED)</th>
+                <th>ED</th>
+                <th>Moderate</th>
+                <th>Severe</th>
+                <th>Mortality/Hospice</th>
+				<th></th>
+				<th></th>
+            </tr>
+</thead>
+<tbody id="example-tbody">
+</tbody>
+</table>
+  
+</div>

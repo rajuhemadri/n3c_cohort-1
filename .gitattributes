@@ -22,10 +22,17 @@ WebContent/feeds/models.jsp -text
 WebContent/feeds/peak.jsp -text
 WebContent/feeds/severity.jsp -text
 WebContent/feeds/severity_detail.jsp -text
+WebContent/feeds/severity_temp.jsp -text
+WebContent/feeds/total_by_source_count_weekly_int.jsp -text
 WebContent/footer.jsp -text
+WebContent/graph_support/cohort_map.jsp -text
+WebContent/graph_support/map_data.jsp -text
 WebContent/graph_support/pieChart.jsp -text
+WebContent/graph_support/pyramid.jsp -text
 WebContent/graph_support/scatterplot.jsp -text
+WebContent/graph_support/us_states.jsp -text
 WebContent/graph_support/verticalBarChart.jsp -text
+WebContent/graph_support/verticalBarChart_v4.jsp -text
 WebContent/graphs/blood.jsp -text
 WebContent/graphs/blood_by_severity.jsp -text
 WebContent/graphs/blood_by_type.jsp -text
@@ -38,6 +45,7 @@ WebContent/graphs/characteristics_race.jsp -text
 WebContent/graphs/charlson.jsp -text
 WebContent/graphs/charlson_scatter.jsp -text
 WebContent/graphs/columnFreqData.jsp -text
+WebContent/graphs/dashboard.jsp -text
 WebContent/graphs/home.jsp -text
 WebContent/graphs/labs.jsp -text
 WebContent/graphs/medications.jsp -text
@@ -56,6 +64,7 @@ WebContent/graphs/tables.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text
+WebContent/index2.jsp -text
 WebContent/navbar.jsp -text
 WebContent/resources/MT.BootstrapLazyloader.js -text
 WebContent/resources/autocomplete.css -text
@@ -67,6 +76,7 @@ WebContent/resources/n3c_login_style.css -text
 WebContent/tables/blood.jsp -text
 WebContent/tables/characteristics.jsp -text
 WebContent/tables/charlson.jsp -text
+WebContent/tables/datatableC.html -text
 WebContent/tables/filled.jsp -text
 WebContent/tables/meds.jsp -text
 WebContent/tables/models.jsp -text

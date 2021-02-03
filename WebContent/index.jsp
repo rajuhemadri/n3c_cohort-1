@@ -15,8 +15,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script src="resources/MT.BootstrapLazyloader.js"></script>
+	<link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet">
+	<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 
-<script src="resources/d3.v3.min.js"></script>
+<script src="resources/d3.v4.min.js"></script>
 <script src="resources/d3.tip.v0.6.3.js"></script>
 
 <style type="text/css" media="all">
@@ -45,52 +47,14 @@ table.dataTable thead .sorting_asc {
 		</div>
 		<p>&nbsp;</p>
 		<ul class="nav nav-tabs lazyload" style="font-size: 16px;">
-			<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-			<li><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
-			<li><a data-toggle="tab" href="#blood">Blood Type</a></li>
-			<li><a data-toggle="tab" href="#charlson">Charlson</a></li>
-			<li><a data-toggle="tab" href="#medications">Medications</a></li>
-			<li><a data-toggle="tab" href="#labs">Labs</a></li>
-			<li><a data-toggle="tab" href="#severity">Severity</a></li>
-			<li><a data-toggle="tab" href="#scatter">Scatter Plots</a></li>
-			<li><a data-toggle="tab" href="#tables">Tables</a></li>
+			<li class="active"><a data-toggle="tab" href="#dashboard">Home</a></li>
 		</ul>
 
 		<div class="tab-content">
-			<div class="tab-pane fade in active" id="home">
-				<jsp:include page="graphs/home.jsp" flush="true" />
-			</div>
-			
-			<div class="tab-pane fade" id="tables">
-				<jsp:include page="graphs/tables.jsp" flush="true" />
-			</div>
-
-			<div class="tab-pane fade" id="blood">
-				<jsp:include page="graphs/blood.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="characteristics">
-				<jsp:include page="graphs/characteristics.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="charlson">
-				<jsp:include page="graphs/charlson.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="medications">
-				<jsp:include page="graphs/medications.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="labs">
-				<jsp:include page="graphs/labs.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="severity">
-				<jsp:include page="graphs/severity.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="scatter">
-				<jsp:include page="graphs/scatter.jsp" flush="true" />
-			</div>
-			<div class="tab-pane fade" id="tables">
-				<jsp:include page="graphs/tables.jsp" flush="true" />
+			<div class="tab-pane fade in active" id="dashboard">
+				<jsp:include page="graphs/dashboard.jsp" flush="true" />
 			</div>
 		</div>
-
 		<jsp:include page="footer.jsp" flush="true" />
 	</div>
 </body>
