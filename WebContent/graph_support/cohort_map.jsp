@@ -59,7 +59,24 @@
 				.attr("x", 0)
 				.attr("width", 55)
 				.attr("height", 19)
-				.attr("fill", function(d) { return color(d.id); });
+				.attr("fill", function(d) { return color(d.id); })
+				.on("mouseover",function(d,i){
+		      		reg = d.id;
+		      		svg.selectAll("path")
+						.style("opacity", function(p) {
+							return p.properties.color == reg ? 1 : 0.3;
+						})
+					svg.selectAll("rect")
+						.style("opacity", function(d) {
+							return d.id == reg ? 1 : 0.3;
+						})
+				})
+				.on("mouseout",function(d,i){
+					svg.selectAll("path")
+		      	    	.style("opacity", 1);
+					svg.selectAll("rect")
+		      			.style("opacity", 1); 
+				});
 				
 				
 			legend.append("text")
@@ -67,13 +84,47 @@
 				.attr("y", 9.5)
 				.attr("dy", "0.32em")
 				.attr("fill", "white")
-				.text(function(d){return d.cumulative.toString() ;}); 
+				.text(function(d){return d.cumulative.toString() ;})
+				.on("mouseover",function(d,i){
+		      		reg = d.id;
+		      		svg.selectAll("path")
+					.style("opacity", function(p) {
+						return p.properties.color == reg ? 1 : 0.3;
+					})
+					svg.selectAll("rect")
+						.style("opacity", function(d) {
+							return d.id == reg ? 1 : 0.3;
+					})
+				})
+				.on("mouseout",function(d,i){
+					svg.selectAll("path")
+		      	 		.style("opacity", 1);
+		        	svg.selectAll("rect")
+		      	      	.style("opacity", 1); 
+				});
 		
 			legend.append("text")
 				.attr("x", 59)
 				.attr("y", 9.5)
 				.attr("dy", "0.32em")
-				.text(function(d) { return d.name;});
+				.text(function(d) { return d.name;})
+				.on("mouseover",function(d,i){
+		      		reg = d.id;
+		      		svg.selectAll("path")
+						.style("opacity", function(p) {
+							return p.properties.color == reg ? 1 : 0.3;
+						})
+					svg.selectAll("rect")
+						.style("opacity", function(d) {
+							return d.id == reg ? 1 : 0.3;
+						})
+				})
+				.on("mouseout",function(d,i){
+					svg.selectAll("path")
+		      	     	.style("opacity", 1);
+					svg.selectAll("rect")
+		      	      	.style("opacity", 1); 
+				});
 			
 			  
 			var dataArray = [];
@@ -116,19 +167,19 @@
 		      		.style("fill", function(d) { return color(d.properties.color) })
 		      		.on("mouseover",function(d,i){
 		      			reg = d.properties.color;
-		      			d3.selectAll("path")
-							.style("opacity", function(d) {
-								return d.properties.color == reg ? 1 : 0.3;
+		      			svg.selectAll("path")
+							.style("opacity", function(p) {
+								return p.properties.color == reg ? 1 : 0.3;
 							})
-						d3.selectAll("rect")
+						svg.selectAll("rect")
 							.style("opacity", function(d) {
 								return d.id == reg ? 1 : 0.3;
 							})
 					})
 					.on("mouseout",function(d,i){
-		            	  d3.selectAll("path")
+						svg.selectAll("path")
 		      	      		.style("opacity", 1);
-		            	  d3.selectAll("rect")
+						svg.selectAll("rect")
 		      	      		.style("opacity", 1); 
 					});
   			});
