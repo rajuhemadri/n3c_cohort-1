@@ -24,6 +24,7 @@
 			draw();
 
 			function draw() {
+				var formatComma = d3.format(",");
 				// D3 Projection
 				var projection = d3.geoAlbersUsa()
 				  .translate([width / 1.8, height / 2]) // translate to center of screen
@@ -57,7 +58,7 @@
 				
 			legend.append("rect")
 				.attr("x", 0)
-				.attr("width", 55)
+				.attr("width", 58)
 				.attr("height", 19)
 				.attr("fill", function(d) { return color(d.id); })
 				.on("mouseover",function(d,i){
@@ -84,7 +85,7 @@
 				.attr("y", 9.5)
 				.attr("dy", "0.32em")
 				.attr("fill", "white")
-				.text(function(d){return d.cumulative.toString() ;})
+				.text(function(d){return formatComma(d.cumulative).toString() ;})
 				.on("mouseover",function(d,i){
 		      		reg = d.id;
 		      		svg.selectAll("path")
@@ -104,7 +105,7 @@
 				});
 		
 			legend.append("text")
-				.attr("x", 59)
+				.attr("x", 62)
 				.attr("y", 9.5)
 				.attr("dy", "0.32em")
 				.text(function(d) { return d.name;})
