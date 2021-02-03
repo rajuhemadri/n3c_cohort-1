@@ -78,7 +78,7 @@
 	</div>
 </div>
 
-<h3>Race and Ethnicity Distributions of N3C Cohort (dummy data for now!)</h3>
+<h3>Race and Ethnicity Distributions of N3C Cohort (ethnicity-aggregated data for now!)</h3>
 
 <div class="row row-no-gutters">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
@@ -174,21 +174,25 @@
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart_v4.jsp">
-	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=age_at_visit_start_in_years_int" />
+	<jsp:param name="data_page"	value="feeds/severity_temp.jsp?severity=lab_confirmed_negative" />
 	<jsp:param name="dom_element" value="#race-negative" />
+	<jsp:param name="grid_label_height" value="0" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart_v4.jsp">
-	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=age_at_visit_start_in_years_int" />
+	<jsp:param name="data_page"	value="feeds/severity_temp.jsp?severity=lab_confirmed_positive" />
 	<jsp:param name="dom_element" value="#race-positive" />
+	<jsp:param name="grid_label_height" value="0" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart_v4.jsp">
-	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=age_at_visit_start_in_years_int" />
+	<jsp:param name="data_page"	value="feeds/severity_temp.jsp?severity=no_covid_test" />
 	<jsp:param name="dom_element" value="#race-none" />
+	<jsp:param name="grid_label_height" value="0" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart_v4.jsp">
-	<jsp:param name="data_page"	value="feeds/characteristics_misc.jsp?variable=age_at_visit_start_in_years_int" />
+	<jsp:param name="data_page"	value="feeds/severity_temp.jsp?severity=suspected_covid" />
 	<jsp:param name="dom_element" value="#race-suspected" />
+	<jsp:param name="grid_label_height" value="0" />
 </jsp:include>
