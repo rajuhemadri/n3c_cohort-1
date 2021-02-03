@@ -3,25 +3,42 @@
 		var width = 960;
 		var height = 500;
 		
-		// D3 Projection
-		var projection = d3.geoAlbersUsa()
-		  .translate([width / 1.8, height / 2]) // translate to center of screen
-		  .scale([1000]); // scale things down so see entire US
-		
-		// Define path generator
-		var path = d3.geoPath() // path generator that will convert GeoJSON to SVG paths
-		  .projection(projection); // tell path generator to use albersUsa projection
-		
-		
-		var svg = d3.select("${param.dom_element}")
-		  .append("svg")
-		  .attr("width", width)
-		  .attr("height", height);
-		
 		// Load the Cohort Data
 		d3.json("${param.data_page}", function(error, data) {
 			if (error) throw error;
 			  
+			var myObserver = new ResizeObserver(entries => {
+				entries.forEach(entry => {
+					var newWidth = Math.floor(entry.contentRect.width);
+					// console.log('body width '+newWidth);
+					if (newWidth > 0) {
+						d3.select("${param.dom_element}").select("svg").remove();
+						width = newWidth;
+						height = width / 2;
+						draw();
+					}
+				});
+			});
+			myObserver.observe(d3.select("${param.dom_element}").node());
+
+			draw();
+
+			function draw() {
+				// D3 Projection
+				var projection = d3.geoAlbersUsa()
+				  .translate([width / 1.8, height / 2]) // translate to center of screen
+				  .scale([width]); // scale things down so see entire US
+				
+				// Define path generator
+				var path = d3.geoPath() // path generator that will convert GeoJSON to SVG paths
+				  .projection(projection); // tell path generator to use albersUsa projection
+				
+				
+				var svg = d3.select("${param.dom_element}")
+				  .append("svg")
+				  .attr("width", width)
+				  .attr("height", height);
+				
 			// Color Scale For Legend and Map 
 			var color = d3.scaleOrdinal() 
 				.domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
@@ -40,7 +57,7 @@
 				
 			legend.append("rect")
 				.attr("x", 0)
-				.attr("width", 50)
+				.attr("width", 55)
 				.attr("height", 19)
 				.attr("fill", function(d) { return color(d.id); });
 				
@@ -53,7 +70,7 @@
 				.text(function(d){return d.cumulative.toString() ;}); 
 		
 			legend.append("text")
-				.attr("x", 54)
+				.attr("x", 59)
 				.attr("y", 9.5)
 				.attr("dy", "0.32em")
 				.text(function(d) { return d.name;});
@@ -115,6 +132,7 @@
 		      	      		.style("opacity", 1); 
 					});
   			});
+			}
 		});
 	</script>
 
