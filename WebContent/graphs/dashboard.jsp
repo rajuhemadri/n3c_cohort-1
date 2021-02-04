@@ -95,6 +95,12 @@
 		display:none; 
 	}
 }
+
+.table-hover tbody tr:hover td, 
+.table-hover tbody tr:hover th {
+  border-top: 2px solid black !important;
+  border-bottom: 2px solid black !important;
+}
 </style>
 
 <div class="row geo">
