@@ -104,14 +104,16 @@
 </style>
 
 <div class="row row-no-gutters geo">
-	<div class="col-xs-9 col-sm-12 col-md-6 col-lg-6">
+	<div class="col-xs-9 col-sm-12 col-md-6 col-lg-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Overall Statistics</div>
 			<div class="panel-body">
+				<div id="overall_stats"></div>
+				<jsp:include page="../tables/overall_stats.jsp" flush="true" />
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-6">
+	<div class="col-xs-8">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Geographic Distribution of N3C Cohort</div>
 			<div class="panel-body">
