@@ -55,10 +55,10 @@
 }
 
 .bar.left {
-  fill: #3d6495;
+  fill: #8099ba;
 }
 .bar.right {
-  fill: #bd2442;
+  fill: #d07083;
 }
 
 .bar{

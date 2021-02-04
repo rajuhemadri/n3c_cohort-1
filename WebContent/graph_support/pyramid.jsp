@@ -208,7 +208,7 @@ d3.json("${param.data_page}", function(data) {
 			.attr('class', 'bar left')
 			.attr('x', 0)
 			.attr('y', function(d) { return yScale(d.group); })
-			.style("stroke", "#ffffff")
+			.style("stroke", "#8099ba")
 			.style("stroke-width", 1)
 			.attr('width', function(d) { return xScale(d.left); })
 			.attr('height', yScale.bandwidth());
@@ -219,7 +219,7 @@ d3.json("${param.data_page}", function(data) {
 			.attr('class', 'bar right')
 			.attr('x', 0)
 			.attr('y', function(d) { return yScale(d.group); })
-			.style("stroke", "#ffffff")
+			.style("stroke", "#d07083")
 			.style("stroke-width", 1)
 			.attr('width', function(d) { return xScale(d.right); })
 			.attr('height', yScale.bandwidth());
