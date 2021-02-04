@@ -27,7 +27,7 @@
 				var formatComma = d3.format(",");
 				// D3 Projection
 				var projection = d3.geoAlbersUsa()
-				  .translate([width / 1.8, height / 2]) // translate to center of screen
+				  .translate([width / 1.6, height / 2]) // translate to center of screen
 				  .scale([width]); // scale things down so see entire US
 				
 				// Define path generator
@@ -43,7 +43,7 @@
 			// Color Scale For Legend and Map 
 			var color = d3.scaleOrdinal() 
 				.domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
-				.range(["#c3e3da", "#bcccc7", "#badae0", "#8fb4c2", "#59808f", "#436573", "#2f4d59", "#405c73" , "#0c1024"]);
+				.range(["#bce4d8", "#b6e1d8", "#a8d9d4", "#a4d8d3", "#9ed4d2", "#80c3cb", "#65b4c3", "#3791b0", "#2d5985"]);
 			
 			// Legend ******************************************************** 
 			var regions = data.regions;

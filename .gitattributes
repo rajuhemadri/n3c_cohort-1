@@ -78,6 +78,7 @@ WebContent/tables/characteristics.jsp -text
 WebContent/tables/charlson.jsp -text
 WebContent/tables/datatableC.html -text
 WebContent/tables/filled.jsp -text
+WebContent/tables/jquery.hottie.js -text
 WebContent/tables/meds.jsp -text
 WebContent/tables/models.jsp -text
 WebContent/tables/peak.jsp -text

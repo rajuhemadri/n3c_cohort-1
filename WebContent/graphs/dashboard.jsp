@@ -83,6 +83,18 @@
 	stroke: white !important;
 }
 
+
+@media (max-width: 760px){
+	#geographic svg > g{
+		transform: scale(0.7);
+	}
+}
+
+@media (max-width: 533px){
+	#geographic svg > g{
+		display:none; 
+	}
+}
 </style>
 
 <div class="row geo">
