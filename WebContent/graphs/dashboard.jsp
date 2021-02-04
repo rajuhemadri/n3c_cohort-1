@@ -52,7 +52,7 @@
 
 .panel-primary {
     border-color: lightgray;
-    margin: 10px;
+/*     margin: 10px; */
 }
 
 .first_heading{
@@ -154,7 +154,7 @@
 <h3 class="first_heading">Race and Ethnicity Distributions of N3C Cohort (ethnicity-aggregated data for now!)</h3>
 
 <div class="row row-no-gutters race_ethnicity">
-	<div class="col-xs-12 col-sm-12 col-md-6">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Lab-confirmed Negative</div>
 			<div class="panel-body">
@@ -162,7 +162,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Lab-confirmed Positive</div>
 			<div class="panel-body">
@@ -170,7 +170,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
 		<div class="panel panel-primary">
 			<div class="panel-heading">No COVID Test</div>
 			<div class="panel-body">
@@ -178,7 +178,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Suspected COVID</div>
 			<div class="panel-body">
