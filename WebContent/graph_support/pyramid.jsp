@@ -8,9 +8,9 @@ d3.json("${param.data_page}", function(data) {
 	// margin.middle is distance from center line to each y-axis
 	var margin = {
 		top: 10,
-		right: 20,
-		bottom: 40,
-		left: 15,
+		right: -15,
+		bottom: 80,
+		left: 5,
 		middle: 18
 	};
 	
@@ -122,12 +122,12 @@ d3.json("${param.data_page}", function(data) {
 		
 		var xAxisRight = d3.axisBottom()
 			.scale(xScale)
-			.ticks(4);
+			.ticks(3);
 		
 		var xAxisLeft = d3.axisBottom()
 			// REVERSE THE X-AXIS SCALE ON THE LEFT SIDE BY REVERSING THE RANGE
 			.scale(xScale.copy().range([pointA-4, 0]))
-			.ticks(4);
+			.ticks(3);
 
 
 		
@@ -144,17 +144,17 @@ d3.json("${param.data_page}", function(data) {
         .text("${param.right_header}");
 
 		svg.append("text")
-        .attr("transform", "translate(" + (w * .25) + " ," + (h + 30) + ")")
+        .attr("transform", "translate(" + (w * .15) + " ," + (h + 70) + ")")
         .style("text-anchor", "middle")
         .text("${param.left_label}");
 
 		svg.append("text")
-        .attr("transform", "translate(" + (w / 2) + " ," + (h + 30) + ")")
+        .attr("transform", "translate(" + (w / 2) + " ," + (h + 50) + ")")
         .style("text-anchor", "middle")
         .text("${param.middle_label}");
 
 		svg.append("text")
-        .attr("transform", "translate(" + (w * .75) + " ," + (h + 30) + ")")
+        .attr("transform", "translate(" + (w * .85) + " ," + (h + 70) + ")")
         .style("text-anchor", "middle")
         .text("${param.right_label}");
 
@@ -182,12 +182,24 @@ d3.json("${param.data_page}", function(data) {
 		svg.append('g')
 			.attr('class', 'axis x left')
 			.attr('transform', translation(0, h))
-			.call(xAxisLeft);
+			.call(xAxisLeft)
+			.selectAll("text")	
+       			.style("text-anchor", "end")
+        		.attr("dx", "-.8em")
+        		.attr("dy", ".15em")
+        		.attr("transform", "rotate(-65)");
 		
 		svg.append('g')
 			.attr('class', 'axis x right')
 			.attr('transform', translation(pointB, h))
-			.call(xAxisRight);
+			.call(xAxisRight)
+			.selectAll("text")	
+       			.style("text-anchor", "start")
+        		.attr("dx", ".8em")
+        		.attr("dy", ".15em")
+        		.attr("transform", "rotate(65)");
+		
+		
 		
 		// DRAW BARS
 		leftBarGroup.selectAll('.bar.left')
