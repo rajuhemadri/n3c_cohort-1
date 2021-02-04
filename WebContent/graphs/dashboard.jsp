@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 
+
+
 <style> /* set the CSS */
 
 /* svg { */
@@ -16,17 +18,6 @@
 }
 .axis text {
   font-size: 11px;
-}
-
-
-.bar {
-  fill-opacity: 0.75;
-}
-.bar.left {
-  fill: steelblue;
-}
-.bar.right {
-  fill: firebrick;
 }
 
 
@@ -63,8 +54,6 @@
 	color: #376076;
 }
 
-
-
 .bar.left {
   fill: #3d6495;
 }
@@ -96,15 +85,21 @@
   border-top: 2px solid black !important;
   border-bottom: 2px solid black !important;
 }
+
+#overall_stats strong{
+	color:#376076;
+}
 </style>
+
 
 <div class="row stats">
 	<div class="col-xs-12 ">
-		<div class="panel panel-primary">
-			<div class="panel-heading">Overall Statistics</div>
+		<div class=" panel-primary">
+			<div class="panel-heading">N3C Data Enclave Statistics</div>
 			<div class="panel-body">
-				<div id="overall_stats"></div>
-				<jsp:include page="../tables/overall_stats.jsp" flush="true" />
+				<div id="overall_stats">
+					<jsp:include page="../graph_support/n3c_fact_sheet.jsp" flush="true" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -168,7 +163,7 @@
 <h3 class="first_heading">Race and Ethnicity Distributions of N3C Cohort (ethnicity-aggregated data for now!)</h3>
 
 <div class="row row-no-gutters race_ethnicity">
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Lab-confirmed Negative</div>
 			<div class="panel-body">
@@ -176,7 +171,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Lab-confirmed Positive</div>
 			<div class="panel-body">
@@ -184,7 +179,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">No COVID Test</div>
 			<div class="panel-body">
@@ -192,7 +187,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Suspected COVID</div>
 			<div class="panel-body">
@@ -208,6 +203,7 @@
 			<div class="panel-heading">Comorbidity Distribution of COVID+ in N3C Cohort</div>
 			<div class="panel-body">
 				<jsp:include page="../tables/datatableC.html"/>
+				 <script type="text/javascript" charset="utf8" src="tables/jquery.hottie.js"></script>
 				<script>init();</script>
 			</div>
 		</div>
