@@ -204,6 +204,8 @@
 			<div class="panel-body">
 				<jsp:include page="../tables/datatableC.html"/>
 				 <script type="text/javascript" charset="utf8" src="tables/jquery.hottie.js"></script>
+				 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+				 <script type="text/javascript" charset="utf8" src="tables/jquery.hottie.js"></script>
 				<script>init();</script>
 			</div>
 		</div>
