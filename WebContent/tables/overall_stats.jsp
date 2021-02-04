@@ -34,6 +34,8 @@ $.getJSON("feeds/fact_sheet.jsp", function(data){
 
 	$('#table1').DataTable( {
     	data: data,
+    	bInfo: false,
+    	searching: false,
        	paging: false,
     	order: [[0, 'asc'],[1, 'asc']],
      	columns: [

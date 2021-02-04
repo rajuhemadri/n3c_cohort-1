@@ -5,27 +5,27 @@
 
 <sql:query var="facts" dataSource="jdbc/N3CCohort">
 	select jsonb_pretty(jsonb_agg(foo)) from (
- 	          	select 'release_date' as title,to_char(substring(value from '[a-zA-Z]*-v[0-9]*-(.*)')::date, 'MonthFMDD, YYYY') as value from n3c_admin.enclave_stats where title='release_name'
+ 	          	select 'Date of Latest Release' as title,to_char(substring(value from '[a-zA-Z]*-v[0-9]*-(.*)')::date, 'MonthFMDD, YYYY') as value from n3c_admin.enclave_stats where title='release_name'
            	union
-            	select title,value from n3c_admin.enclave_stats where title='release_name'
+            	select 'Latest Release' as title,value from n3c_admin.enclave_stats where title='release_name'
            	union
-            	select title,value from n3c_admin.enclave_stats where title='sites_ingested'
+            	select 'Sites' as title,value from n3c_admin.enclave_stats where title='sites_ingested'
            	union
-            	select title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='person_rows'
+            	select 'Persons' as title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='person_rows'
            	union
-	           	select title,trim(to_char(value::int,'FM999,999')) as value from n3c_admin.enclave_stats where title='covid_positive_patients'
+	           	select 'COVID-positive Cases' as title,trim(to_char(value::int,'FM999,999')) as value from n3c_admin.enclave_stats where title='covid_positive_patients'
            	union
-            	select title,trim(to_char(value::bigint/1000000000.0,'999.9')||' billion') as value from n3c_admin.enclave_stats where title='total_rows'
+            	select 'Total Number of Rows' as title,trim(to_char(value::bigint/1000000000.0,'999.9')||' billion') as value from n3c_admin.enclave_stats where title='total_rows'
            	union
-            	select title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='observation_rows'
+            	select 'Clinical Observations' as title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='observation_rows'
            	union
-            	select title,trim(to_char(value::bigint/1000000000.0,'999.9')||' billion') as value from n3c_admin.enclave_stats where title='measurement_rows'
+            	select 'Lab Results' as title,trim(to_char(value::bigint/1000000000.0,'999.9')||' billion') as value from n3c_admin.enclave_stats where title='measurement_rows'
            	union
-            	select title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='drug_exposure_rows'
+            	select 'Medication Records' as title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='drug_exposure_rows'
            	union
-            	select title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='procedure_rows'
+            	select 'Procedures' as title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='procedure_rows'
            	union
-            	select title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='visit_rows'
+            	select 'Visits' as title,trim(to_char(value::int/1000000.0,'999.9')||' million') as value from n3c_admin.enclave_stats where title='visit_rows'
 	) as foo;
 </sql:query>
 {
