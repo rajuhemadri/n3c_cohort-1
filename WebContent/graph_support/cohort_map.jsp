@@ -27,7 +27,7 @@
 				var formatComma = d3.format(",");
 				// D3 Projection
 				var projection = d3.geoAlbersUsa()
-				  .translate([width / 1.6, height / 2]) // translate to center of screen
+				  .translate([width / 2, height / 2]) // translate to center of screen
 				  .scale([width]); // scale things down so see entire US
 				
 				// Define path generator
@@ -44,88 +44,6 @@
 			var color = d3.scaleOrdinal() 
 				.domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
 				.range(["#bce4d8", "#b6e1d8", "#a8d9d4", "#a4d8d3", "#9ed4d2", "#80c3cb", "#65b4c3", "#3791b0", "#2d5985"]);
-			
-			// Legend ******************************************************** 
-			var regions = data.regions;
-			
-			var legend = svg.append("g")
-				.attr("font-size", 14)
-				.attr("text-anchor", "start")
-				.selectAll("g")
-				.data(regions)
-				.enter().append("g")
-				.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-				
-			legend.append("rect")
-				.attr("x", 0)
-				.attr("width", 58)
-				.attr("height", 19)
-				.attr("fill", function(d) { return color(d.id); })
-				.on("mouseover",function(d,i){
-		      		reg = d.id;
-		      		svg.selectAll("path")
-						.style("opacity", function(p) {
-							return p.properties.color == reg ? 1 : 0.3;
-						})
-					svg.selectAll("rect")
-						.style("opacity", function(d) {
-							return d.id == reg ? 1 : 0.3;
-						})
-				})
-				.on("mouseout",function(d,i){
-					svg.selectAll("path")
-		      	    	.style("opacity", 1);
-					svg.selectAll("rect")
-		      			.style("opacity", 1); 
-				});
-				
-				
-			legend.append("text")
-				.attr("x", 5)
-				.attr("y", 9.5)
-				.attr("dy", "0.32em")
-				.attr("fill", "white")
-				.text(function(d){return formatComma(d.cumulative).toString() ;})
-				.on("mouseover",function(d,i){
-		      		reg = d.id;
-		      		svg.selectAll("path")
-					.style("opacity", function(p) {
-						return p.properties.color == reg ? 1 : 0.3;
-					})
-					svg.selectAll("rect")
-						.style("opacity", function(d) {
-							return d.id == reg ? 1 : 0.3;
-					})
-				})
-				.on("mouseout",function(d,i){
-					svg.selectAll("path")
-		      	 		.style("opacity", 1);
-		        	svg.selectAll("rect")
-		      	      	.style("opacity", 1); 
-				});
-		
-			legend.append("text")
-				.attr("x", 62)
-				.attr("y", 9.5)
-				.attr("dy", "0.32em")
-				.text(function(d) { return d.name;})
-				.on("mouseover",function(d,i){
-		      		reg = d.id;
-		      		svg.selectAll("path")
-						.style("opacity", function(p) {
-							return p.properties.color == reg ? 1 : 0.3;
-						})
-					svg.selectAll("rect")
-						.style("opacity", function(d) {
-							return d.id == reg ? 1 : 0.3;
-						})
-				})
-				.on("mouseout",function(d,i){
-					svg.selectAll("path")
-		      	     	.style("opacity", 1);
-					svg.selectAll("rect")
-		      	      	.style("opacity", 1); 
-				});
 			
 			  
 			var dataArray = [];
@@ -172,15 +90,17 @@
 							.style("opacity", function(p) {
 								return p.properties.color == reg ? 1 : 0.3;
 							})
-						svg.selectAll("rect")
+						d3.selectAll("rect")
 							.style("opacity", function(d) {
-								return d.id == reg ? 1 : 0.3;
+								if (d.id){
+									return d.id == reg ? 1 : 0.3;
+								}
 							})
 					})
 					.on("mouseout",function(d,i){
 						svg.selectAll("path")
 		      	      		.style("opacity", 1);
-						svg.selectAll("rect")
+						d3.selectAll("rect")
 		      	      		.style("opacity", 1); 
 					});
   			});

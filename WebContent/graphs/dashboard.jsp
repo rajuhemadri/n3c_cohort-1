@@ -37,6 +37,7 @@
 }
 
 .geo .panel-heading,
+.stats .panel-heading,
 .comor .panel-heading{
     font-size: 25px;
     color: #376076;
@@ -84,15 +85,9 @@
 }
 
 
-@media (max-width: 760px){
-	#geographic svg > g{
+@media (min-width: 768px) and (max-width: 946px){
+	#geographic_legend svg > g{
 		transform: scale(0.7);
-	}
-}
-
-@media (max-width: 533px){
-	#geographic svg > g{
-		display:none; 
 	}
 }
 
@@ -103,8 +98,8 @@
 }
 </style>
 
-<div class="row row-no-gutters geo">
-	<div class="col-xs-9 col-sm-12 col-md-6 col-lg-4">
+<div class="row stats">
+	<div class="col-xs-12 ">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Overall Statistics</div>
 			<div class="panel-body">
@@ -113,11 +108,21 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-8">
+</div>
+
+<div class="row geo">
+	<div class="col-xs-12">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Geographic Distribution of N3C Cohort</div>
 			<div class="panel-body">
-				<div id="geographic"></div>
+				<div class="row">
+					<div class="col-xs-12 col-md-3">
+						<div id="geographic_legend"></div>
+					</div>
+					<div class="col-xs-12 col-md-9">
+						<div id="geographic"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -214,6 +219,14 @@
 	<jsp:param name="state_page" value="graph_support/us_states.jsp" />
 	<jsp:param name="dom_element" value="#geographic" />
 </jsp:include>
+
+<jsp:include page="../graph_support/cohort_map_legend.jsp">
+	<jsp:param name="data_page" value="graph_support/map_data.jsp" />
+	<jsp:param name="state_page" value="graph_support/us_states.jsp" />
+	<jsp:param name="dom_element" value="#geographic_legend" />
+</jsp:include>
+
+
 
 <jsp:include page="../graph_support/pyramid.jsp">
 	<jsp:param name="data_page" value="feeds/count_by_age.jsp?status=lab_confirmed_negative" />

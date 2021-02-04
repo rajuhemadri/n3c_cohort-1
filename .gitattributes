@@ -29,6 +29,7 @@ WebContent/feeds/severity_temp.jsp -text
 WebContent/feeds/total_by_source_count_weekly_int.jsp -text
 WebContent/footer.jsp -text
 WebContent/graph_support/cohort_map.jsp -text
+WebContent/graph_support/cohort_map_legend.jsp -text
 WebContent/graph_support/map_data.jsp -text
 WebContent/graph_support/pieChart.jsp -text
 WebContent/graph_support/pyramid.jsp -text
