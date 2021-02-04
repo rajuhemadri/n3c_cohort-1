@@ -50,6 +50,7 @@ WebContent/graphs/characteristics_payer.jsp -text
 WebContent/graphs/characteristics_race.jsp -text
 WebContent/graphs/charlson.jsp -text
 WebContent/graphs/charlson_scatter.jsp -text
+WebContent/graphs/collaborative.jsp -text
 WebContent/graphs/columnFreqData.jsp -text
 WebContent/graphs/dashboard.jsp -text
 WebContent/graphs/home.jsp -text
