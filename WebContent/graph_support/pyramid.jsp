@@ -8,9 +8,9 @@ d3.json("${param.data_page}", function(data) {
 	// margin.middle is distance from center line to each y-axis
 	var margin = {
 		top: 10,
-		right: 10,
+		right: 20,
 		bottom: 40,
-		left: 10,
+		left: 15,
 		middle: 18
 	};
 	

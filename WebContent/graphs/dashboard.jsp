@@ -103,8 +103,15 @@
 }
 </style>
 
-<div class="row geo">
-	<div class="col-xs-12">
+<div class="row row-no-gutters geo">
+	<div class="col-xs-9 col-sm-12 col-md-6 col-lg-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Overall Statistics</div>
+			<div class="panel-body">
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Geographic Distribution of N3C Cohort</div>
 			<div class="panel-body">
@@ -114,7 +121,7 @@
 	</div>
 </div>
 
-<h3 class="first_heading">Age and Sex Distributions of N3C Cohort (dummy data for now!)</h3>
+<h3 class="first_heading">Age and Sex Distributions of N3C Cohort</h3>
 
 <div class="row row-no-gutters age_sex">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
@@ -207,43 +214,43 @@
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
-	<jsp:param name="data_page" value="feeds/total_by_source_count_weekly_int.jsp" />
+	<jsp:param name="data_page" value="feeds/count_by_age.jsp?status=lab_confirmed_negative" />
 	<jsp:param name="dom_element" value="#demographic-negative" />
-	<jsp:param name="left_header" value="bioRxiv" />
-	<jsp:param name="right_header" value="medRxiv" />
-	<jsp:param name="left_label" value="# of preprints" />
-	<jsp:param name="middle_label" value="Week" />
-	<jsp:param name="right_label" value="# of preprints" />
+	<jsp:param name="left_header" value="Male" />
+	<jsp:param name="right_header" value="Female" />
+	<jsp:param name="left_label" value="# of persons" />
+	<jsp:param name="middle_label" value="Age" />
+	<jsp:param name="right_label" value="# of persons" />
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
-	<jsp:param name="data_page" value="feeds/total_by_source_count_weekly_int.jsp" />
+	<jsp:param name="data_page" value="feeds/count_by_age.jsp?status=lab_confirmed_positive" />
 	<jsp:param name="dom_element" value="#demographic-positive" />
-	<jsp:param name="left_header" value="bioRxiv" />
-	<jsp:param name="right_header" value="medRxiv" />
-	<jsp:param name="left_label" value="# of preprints" />
-	<jsp:param name="middle_label" value="Week" />
-	<jsp:param name="right_label" value="# of preprints" />
+	<jsp:param name="left_header" value="Male" />
+	<jsp:param name="right_header" value="Female" />
+	<jsp:param name="left_label" value="# of persons" />
+	<jsp:param name="middle_label" value="Age" />
+	<jsp:param name="right_label" value="# of persons" />
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
-	<jsp:param name="data_page" value="feeds/total_by_source_count_weekly_int.jsp" />
+	<jsp:param name="data_page" value="feeds/count_by_age.jsp?status=no_covid_test" />
 	<jsp:param name="dom_element" value="#demographic-none" />
-	<jsp:param name="left_header" value="bioRxiv" />
-	<jsp:param name="right_header" value="medRxiv" />
-	<jsp:param name="left_label" value="# of preprints" />
-	<jsp:param name="middle_label" value="Week" />
-	<jsp:param name="right_label" value="# of preprints" />
+	<jsp:param name="left_header" value="Male" />
+	<jsp:param name="right_header" value="Female" />
+	<jsp:param name="left_label" value="# of persons" />
+	<jsp:param name="middle_label" value="Age" />
+	<jsp:param name="right_label" value="# of persons" />
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
-	<jsp:param name="data_page" value="feeds/total_by_source_count_weekly_int.jsp" />
+	<jsp:param name="data_page" value="feeds/count_by_age.jsp?status=suspected_COVID" />
 	<jsp:param name="dom_element" value="#demographic-suspected" />
-	<jsp:param name="left_header" value="bioRxiv" />
-	<jsp:param name="right_header" value="medRxiv" />
-	<jsp:param name="left_label" value="# of preprints" />
-	<jsp:param name="middle_label" value="Week" />
-	<jsp:param name="right_label" value="# of preprints" />
+	<jsp:param name="left_header" value="Male" />
+	<jsp:param name="right_header" value="Female" />
+	<jsp:param name="left_label" value="# of persons" />
+	<jsp:param name="middle_label" value="Age" />
+	<jsp:param name="right_label" value="# of persons" />
 </jsp:include>
 
 <jsp:include page="../graph_support/verticalBarChart_v4.jsp">
