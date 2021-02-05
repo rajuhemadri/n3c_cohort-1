@@ -59,10 +59,18 @@ d3.json("${param.data_page}", function(data) {
     	.rangeRound([0, y0.bandwidth()])
     	.padding(0.05);
     
-
+    
+    
+  
+    
+  
+	var axis_label_list= [0, ((Math.round((maxValue * .05)/100000))*100000)/2, (Math.round((maxValue * .2)/100000))*100000, (Math.round((maxValue * .5)/100000))*100000, (Math.round((maxValue)/100000))*100000];
+	
     var xAxis = d3.axisBottom(x0)
-    	.ticks(6, ",.1s")
-    	.tickSize(6, 0);
+    	.ticks(5)
+    	.tickFormat(d3.format(",.1s"))
+    	//.tickSize(6, 0)
+    	.tickValues(axis_label_list);
     	
     var yAxis = d3.axisLeft()
     	.tickValues(data.map(d=>d.abbrev))
@@ -77,8 +85,7 @@ d3.json("${param.data_page}", function(data) {
     		.attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .style('font-weight','bold')
-            .text("Value");
+            .style('font-weight','bold');
 
     svg.append("g")
     	.attr("class", "y axis")
