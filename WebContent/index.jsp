@@ -55,9 +55,7 @@ table.dataTable thead .sorting_asc {
 			<div class="tab-pane fade in active" id="dashboard">
 				<jsp:include page="graphs/dashboard.jsp" flush="true" />
 			</div>
-		</div>
-		<div class="tab-content">
-			<div class="tab-pane fade in active" id="collaborative">
+			<div class="tab-pane fade" id="collaborative">
 				<jsp:include page="graphs/collaborative.jsp" flush="true" />
 			</div>
 		</div>
