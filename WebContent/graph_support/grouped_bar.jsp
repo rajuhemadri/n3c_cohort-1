@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 
 <script>
@@ -7,8 +8,16 @@ d3.json("${param.data_page}", function(data) {
     var margin = {top: 0, right: 10, bottom: 20, left: 50};
     var width = 1400 - margin.left - margin.right;
     var height = 400 - margin.top - margin.bottom;
+    <c:choose>
+	<c:when test="${not empty param.maxValue}">
+    var maxValue = ${param.maxValue};
+	</c:when>
+	<c:otherwise>
+    var maxValue = d3.max(data, function(race) { return d3.max(race.values, function(d) { return d.sum; }); });
+	</c:otherwise>
+	</c:choose>
     
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+	const color = d3.scaleOrdinal(d3.schemeCategory10);
     
 	var myObserver = new ResizeObserver(entries => {
 		entries.forEach(entry => {
@@ -36,9 +45,9 @@ d3.json("${param.data_page}", function(data) {
     var rateNames = data[0].values.map(function(d) { return d.ethnicity; });
 
    
-    var x0 = d3.scaleLog()
+    var x0 = d3.scaleSqrt()
     	.range([0, width])
-    	.domain([1, d3.max(data, function(race) { return d3.max(race.values, function(d) { return d.sum; }); })]);
+    	.domain([1, maxValue]);
     
     var y0 = d3.scaleBand()
 		.rangeRound([0, height])
@@ -53,7 +62,7 @@ d3.json("${param.data_page}", function(data) {
 
     var xAxis = d3.axisBottom(x0)
     	.ticks(6, ",.1s")
-    .tickSize(6, 0);
+    	.tickSize(6, 0);
     	
     var yAxis = d3.axisLeft()
     	.tickValues(data.map(d=>d.abbrev))
@@ -96,7 +105,7 @@ d3.json("${param.data_page}", function(data) {
 		.data(data[0].values.map(function(d) { return d.ethnicity; }).reverse())
 			.enter().append("g")
  			.attr("class", "legend")
-			.attr("transform", function(d,i) { return "translate(0," + ((i * 20)+height/2) + ")"; })
+			.attr("transform", function(d,i) { return "translate(0," + ((i * 20)+height*0.8) + ")"; })
 			.style("opacity","1");
 
 		legend.append("rect")

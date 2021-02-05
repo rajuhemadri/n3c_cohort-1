@@ -55,10 +55,10 @@
 }
 
 .bar.left {
-  fill: #8099ba;
+  fill: #6b486b;
 }
 .bar.right {
-  fill: #d07083;
+  fill: #a05d56;
 }
 
 .bar{
@@ -225,6 +225,12 @@
 </jsp:include>
 
 
+<sql:query var="facts" dataSource="jdbc/N3CCohort">
+	select max(sum) from enclave_cohort.age_hist_data;
+</sql:query>
+<c:forEach items="${facts.rows}" var="row" varStatus="rowCounter">
+	<c:set var="max_age_value" value="${row.max}" />
+</c:forEach>
 
 <jsp:include page="../graph_support/pyramid.jsp">
 	<jsp:param name="data_page" value="feeds/count_by_age.jsp?status=lab_confirmed_negative" />
@@ -234,6 +240,7 @@
 	<jsp:param name="left_label" value="# of persons" />
 	<jsp:param name="middle_label" value="Age" />
 	<jsp:param name="right_label" value="# of persons" />
+	<jsp:param name="maxValue" value="${max_age_value}" />
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
@@ -244,6 +251,7 @@
 	<jsp:param name="left_label" value="# of persons" />
 	<jsp:param name="middle_label" value="Age" />
 	<jsp:param name="right_label" value="# of persons" />
+	<jsp:param name="maxValue" value="${max_age_value}" />
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
@@ -254,6 +262,7 @@
 	<jsp:param name="left_label" value="# of persons" />
 	<jsp:param name="middle_label" value="Age" />
 	<jsp:param name="right_label" value="# of persons" />
+	<jsp:param name="maxValue" value="${max_age_value}" />
 </jsp:include>
 
 <jsp:include page="../graph_support/pyramid.jsp">
@@ -264,28 +273,40 @@
 	<jsp:param name="left_label" value="# of persons" />
 	<jsp:param name="middle_label" value="Age" />
 	<jsp:param name="right_label" value="# of persons" />
+	<jsp:param name="maxValue" value="${max_age_value}" />
 </jsp:include>
+
+<sql:query var="facts" dataSource="jdbc/N3CCohort">
+	select max(sum) from enclave_cohort.race_hist_data;
+</sql:query>
+<c:forEach items="${facts.rows}" var="row" varStatus="rowCounter">
+	<c:set var="max_race_value" value="${row.max}" />
+</c:forEach>
 
 <jsp:include page="../graph_support/grouped_bar.jsp">
 	<jsp:param name="data_page"	value="feeds/count_by_race.jsp?status=lab_confirmed_negative" />
 	<jsp:param name="dom_element" value="#race-negative" />
 	<jsp:param name="grid_label_height" value="0" />
+	<jsp:param name="maxValue" value="${max_race_value}" />
 </jsp:include>
 
 <jsp:include page="../graph_support/grouped_bar.jsp">
 	<jsp:param name="data_page"	value="feeds/count_by_race.jsp?status=lab_confirmed_positive" />
 	<jsp:param name="dom_element" value="#race-positive" />
 	<jsp:param name="grid_label_height" value="0" />
+	<jsp:param name="maxValue" value="${max_race_value}" />
 </jsp:include>
 
 <jsp:include page="../graph_support/grouped_bar.jsp">
 	<jsp:param name="data_page"	value="feeds/count_by_race.jsp?status=no_covid_test" />
 	<jsp:param name="dom_element" value="#race-none" />
 	<jsp:param name="grid_label_height" value="0" />
+	<jsp:param name="maxValue" value="${max_race_value}" />
 </jsp:include>
 
 <jsp:include page="../graph_support/grouped_bar.jsp">
 	<jsp:param name="data_page"	value="feeds/count_by_race.jsp?status=suspected_COVID" />
 	<jsp:param name="dom_element" value="#race-suspected" />
 	<jsp:param name="grid_label_height" value="0" />
+	<jsp:param name="maxValue" value="${max_race_value}" />
 </jsp:include>

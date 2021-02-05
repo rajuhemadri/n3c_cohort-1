@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <script>
 
 d3.json("${param.data_page}", function(data) {
@@ -53,10 +55,17 @@ d3.json("${param.data_page}", function(data) {
 		
 		// find the maximum data value on either side
 		//  since this will be shared by both of the x-axes
+    <c:choose>
+	<c:when test="${not empty param.maxValue}">
+	    var maxValue = ${param.maxValue};
+	</c:when>
+	<c:otherwise>
 		var maxValue = Math.max(
-			d3.max(data, function(d) { return d.left; }),
-			d3.max(data, function(d) { return d.right; })
+				d3.max(data, function(d) { return d.left; }),
+				d3.max(data, function(d) { return d.right; })
 		);
+	</c:otherwise>
+	</c:choose>
 		
 		// SET UP SCALES
 		
@@ -122,12 +131,12 @@ d3.json("${param.data_page}", function(data) {
 		
 		var xAxisRight = d3.axisBottom()
 			.scale(xScale)
-			.ticks(3);
+			.ticks(3, ",s");
 		
 		var xAxisLeft = d3.axisBottom()
 			// REVERSE THE X-AXIS SCALE ON THE LEFT SIDE BY REVERSING THE RANGE
 			.scale(xScale.copy().range([pointA-4, 0]))
-			.ticks(3);
+			.ticks(3, ",s");
 
 
 		
@@ -144,17 +153,17 @@ d3.json("${param.data_page}", function(data) {
         .text("${param.right_header}");
 
 		svg.append("text")
-        .attr("transform", "translate(" + (w * .15) + " ," + (h + 70) + ")")
+        .attr("transform", "translate(" + (w * .15) + " ," + (h + 50) + ")")
         .style("text-anchor", "middle")
         .text("${param.left_label}");
 
 		svg.append("text")
-        .attr("transform", "translate(" + (w / 2) + " ," + (h + 50) + ")")
+        .attr("transform", "translate(" + (w / 2) + " ," + (h + 40) + ")")
         .style("text-anchor", "middle")
         .text("${param.middle_label}");
 
 		svg.append("text")
-        .attr("transform", "translate(" + (w * .85) + " ," + (h + 70) + ")")
+        .attr("transform", "translate(" + (w * .85) + " ," + (h + 50) + ")")
         .style("text-anchor", "middle")
         .text("${param.right_label}");
 
@@ -184,20 +193,16 @@ d3.json("${param.data_page}", function(data) {
 			.attr('transform', translation(0, h))
 			.call(xAxisLeft)
 			.selectAll("text")	
-       			.style("text-anchor", "end")
-        		.attr("dx", "-.8em")
-        		.attr("dy", ".15em")
-        		.attr("transform", "rotate(-65)");
+       			.style("text-anchor", "middle")
+        		.attr("dy", ".60em");
 		
 		svg.append('g')
 			.attr('class', 'axis x right')
 			.attr('transform', translation(pointB, h))
 			.call(xAxisRight)
 			.selectAll("text")	
-       			.style("text-anchor", "start")
-        		.attr("dx", ".8em")
-        		.attr("dy", ".15em")
-        		.attr("transform", "rotate(65)");
+       			.style("text-anchor", "middle")
+         		.attr("dy", ".60em");
 		
 		
 		
@@ -208,7 +213,7 @@ d3.json("${param.data_page}", function(data) {
 			.attr('class', 'bar left')
 			.attr('x', 0)
 			.attr('y', function(d) { return yScale(d.group); })
-			.style("stroke", "#8099ba")
+			.style("stroke", "#6b486b")
 			.style("stroke-width", 1)
 			.attr('width', function(d) { return xScale(d.left); })
 			.attr('height', yScale.bandwidth());
@@ -219,7 +224,7 @@ d3.json("${param.data_page}", function(data) {
 			.attr('class', 'bar right')
 			.attr('x', 0)
 			.attr('y', function(d) { return yScale(d.group); })
-			.style("stroke", "#d07083")
+			.style("stroke", "#a05d56")
 			.style("stroke-width", 1)
 			.attr('width', function(d) { return xScale(d.right); })
 			.attr('height', yScale.bandwidth());
